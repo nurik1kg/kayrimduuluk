@@ -1,2 +1,2 @@
-# kayrimduuluk
+# Kairymduuluk
 Bir demoorchu bir okuuchu
