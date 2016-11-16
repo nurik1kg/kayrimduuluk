@@ -210,4 +210,22 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+    /**
+     * Sponsor pages
+     */
+    public function actionSponsors()
+    {
+
+        return $this->render('sponsor');
+    }
+
+    public function  actionNews(){
+
+        return $this->render('news');
+    }
+
+    public function actionGreat_names(){
+
+        return $this->render('people');
+    }
 }

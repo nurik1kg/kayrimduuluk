@@ -1,0 +1,618 @@
+.lang {
+  border: 1px dotted #77819d;
+  color: #fff;
+  display: inline-block;
+  font-size: 10px;
+  margin: 7px -5px 0 5px;
+  padding: 2px 10px;
+}
+
+.lang:hover {
+  border: 1px solid #fba026;
+  color: #fff;
+  text-decoration: none;
+}
+
+.lang-kg {
+  border: 1px solid #919191;
+}
+
+.section1 {
+  background: #475577 none repeat scroll 0 0;
+}
+
+.section1-block1 {
+  background: rgba(0, 0, 0, 0) url("../img/bg/s2.jpg") repeat scroll 0 0;
+  background-size: cover;
+  height: 500px;
+}
+
+.section1-block2 {
+  background: rgba(0, 0, 0, 0) url("../img/bg/s1.jpg") repeat scroll 0 0;
+  background-size: cover;
+  height: 500px;
+}
+
+.section1-sub-block {
+  background: rgba(0, 0, 0, 0) linear-gradient(to right, rgba(71, 85, 119, 0.3) 0px, rgba(255, 255, 255, 0)) repeat scroll 0 0;
+  height: 100%;
+  position: relative;
+}
+
+.section1-sub-block:hover {
+  background: none;
+}
+
+.section1-sub-block1 {
+  background: rgba(0, 0, 0, 0) linear-gradient(to left, rgba(71, 85, 119, 0.3) 0px, rgba(255, 255, 255, 0)) repeat scroll 0 0;
+  height: 100%;
+  position: relative;
+}
+
+.section1-sub-block1:hover {
+  background: none;
+}
+
+.container-section1 {
+
+}
+
+.sub-panel {
+  background: rgba(0, 0, 0, 0) linear-gradient(to right, rgba(16, 20, 32, 0.7) 0px, rgba(16, 20, 32, 0.3)) repeat scroll 0 0;
+  border-radius: 7px;
+  color: #fff;
+  margin: 0 0 0 25px;
+  padding: 15px;
+  position: relative;
+  top: 145px;
+  width: 300px;
+}
+
+.arrow-bottom {
+  margin: -100px 0 0;
+  position: relative;
+  z-index: 999;
+}
+.arrow-bottom > div {
+  height: 100px;
+  margin: 0 auto;
+  padding: 0;
+  width: 40px;
+}
+.arrow-top {
+  height: 140px;
+  margin-bottom: -140px;
+  position: relative;
+}
+
+.sub-title {
+  color: #fac51c;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.top {
+  background: rgba(0, 0, 0, 0) linear-gradient(to right, #414b67 0px, #28324e) repeat scroll 0 0;
+  height: 80px;
+}
+
+.logo {
+  display: inline-block;
+  height: 80px;
+  padding: 0;
+}
+
+.arrow-animate {
+  -webkit-animation: maintoparrow 4s infinite;
+  animation: maintoparrow 4s infinite;
+}
+
+@-webkit-keyframes maintoparrow {
+  from{-webkit-transform: translateX(0);}
+  50%{-webkit-transform: translateX(15px);}
+  to{-webkit-transform: translateX(0);}
+}
+@keyframes maintoparrow {
+  from{transform: translateX(0);}
+  50%{transform: translateX(15px);}
+  to{transform: translateX(0);}
+}
+
+.balls-animate {
+  -webkit-animation: balls 3s infinite;
+  animation: balls 3s infinite;
+}
+
+@-webkit-keyframes balls {
+  from{-webkit-transform: translateY(0);}
+  50%{-webkit-transform: translateY(15px);}
+  to{-webkit-transform: translateY(0);}
+}
+@keyframes balls {
+  from{transform: translateY(0);}
+  50%{transform: translateY(15px);}
+  to{transform: translateY(0);}
+}
+
+.arrow-bottom-animate {
+  -webkit-animation: arrowbottom 3s infinite;
+  animation: arrowbottom 3s infinite;
+}
+
+@-webkit-keyframes arrowbottom {
+  from{-webkit-transform: translateY(0);}
+  50%{-webkit-transform: translateY(5px);}
+  to{-webkit-transform: translateY(0);}
+}
+@keyframes arrowbottom {
+  from{transform: translateY(0);}
+  50%{transform: translateY(5px);}
+  to{transform: translateY(0);}
+}
+
+.section2 {
+  background: #fba026 none repeat scroll 0 0;
+  height: 500px;
+}
+
+
+.section3 {
+}
+
+.section2-block1 {
+  background: #fac51c none repeat scroll 0 0;
+  height: 400px;
+  padding: 80px 0 20px;
+}
+
+.section2-block2 {
+  background: #fba026  none repeat scroll 0 0;
+  height: 400px;
+  padding: 80px 0 20px;
+}
+
+.section3-block1 {
+  background: #61bd6d none repeat scroll 0 0;
+  height: 400px;
+  padding: 80px 0 20px;
+}
+
+.section3-block2 {
+  background: #41a85f  none repeat scroll 0 0;
+  height: 400px;
+  padding: 80px 0 20px;
+}
+
+.person {
+  padding: 0 35px 35px;
+}
+
+.person-title {
+  color: #28324e;
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+.person-date {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 20px;
+  color: #414b67;
+  display: inline-block;
+  font-size: 19px;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px 20px;
+  text-transform: uppercase;
+}
+
+.pdt {
+  height: 60px;
+  margin: 0 0 -60px;
+  position: relative;
+}
+
+.pdtt {
+  background: #475577 none repeat scroll 0 0;
+  border-radius: 0 0 21px 21px;
+  color: #fff;
+  display: block;
+  font-size: 12px;
+  margin: 0 auto;
+  padding: 7px 15px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100px;
+}
+
+.daddy > a {
+  background: rgba(0, 0, 0, 0) url("../img/uson/Yson2.png") no-repeat scroll 40px 0 / contain ;
+  transition: 0.2s ease-in-out;
+  display: flex;
+  height: 335px;
+  width: 270px;
+}
+
+.daddy1 > a {
+  background: rgba(0, 0, 0, 0) url("../img/uson/Yson3.png") no-repeat scroll 40px 0 / contain ;
+  transition: 0.2s ease-in-out;
+  display: flex;
+  height: 335px;
+  width: 270px;
+}
+
+.daddy2 > a {
+  background: rgba(0, 0, 0, 0) url("../img/uson/Yson15.png") no-repeat scroll 40px 0 / contain ;
+  transition: 0.2s ease-in-out;
+  display: flex;
+  height: 335px;
+  width: 270px;
+}
+
+.daddy3 > a {
+  background: rgba(0, 0, 0, 0) url("../img/uson/18.png") no-repeat scroll 40px 0 / contain ;
+  transition: 0.2s ease-in-out;
+  display: flex;
+  height: 335px;
+  width: 270px;
+}
+
+.daddy4 > a {
+  background: rgba(0, 0, 0, 0) url("../img/uson/23.png") no-repeat scroll 40px 0 / contain ;
+  transition: 0.2s ease-in-out;
+  display: flex;
+  height: 335px;
+  width: 270px;
+}
+
+.daddy5 > a {
+  background: rgba(0, 0, 0, 0) url("../img/uson/27.png") no-repeat scroll 40px 0 / contain ;
+  transition: 0.2s ease-in-out;
+  display: flex;
+  height: 335px;
+  width: 270px;
+}
+
+
+
+.section4-block1 {
+  background: #54acd2 none repeat scroll 0 0;
+  height: 400px;
+  padding: 80px 0 20px;
+}
+
+.section4-block2 {
+  background: #3d8eb9  none repeat scroll 0 0;
+  height: 400px;
+  padding: 80px 0 20px;
+}
+
+.section5-block1 {
+  background: #eb6b56 none repeat scroll 0 0;
+  height: 400px;
+  padding: 80px 0 20px;
+}
+
+.section5-block2 {
+  background: #e14938  none repeat scroll 0 0;
+  height: 400px;
+  padding: 80px 0 20px;
+}
+
+.section6-block1 {
+  background: #1abc9c none repeat scroll 0 0;
+  height: 400px;
+  padding: 80px 0 20px;
+}
+
+.section6-block2 {
+  background: #00a885  none repeat scroll 0 0;
+  height: 400px;
+  padding: 80px 0 20px;
+}
+
+.section7-block1 {
+  background: #2c82c9 none repeat scroll 0 0;
+  height: 400px;
+  padding: 80px 0 20px;
+}
+
+.section7-block2 {
+  background: #2969b0  none repeat scroll 0 0;
+  height: 400px;
+  padding: 80px 0 20px;
+}
+
+.section8-block1 {
+  background: #a38f84 none repeat scroll 0 0;
+  height: 400px;
+  padding: 80px 0 20px;
+}
+
+.section8-block2 {
+  background: #75706b  none repeat scroll 0 0;
+  height: 400px;
+  padding: 80px 0 20px;
+}
+
+
+.section-info {
+  background: #475577 none repeat scroll 0 0;
+  padding: 0 0 50px;
+}
+
+.info-title {
+  color: #fac51c;
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 50px;
+  margin: 40px 0 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+.dnb {
+  text-transform: uppercase;
+}
+
+.section-info1 {
+  background-color: #3b4561;
+  background-image: -moz-linear-gradient(0px 50% , transparent 90%, #475577 50%);
+  background-size: 10px auto;
+  padding: 0 0 40px;
+}
+
+.stat1 {
+  color: #fff;
+  font-size: 19px;
+  font-weight: bold;
+  margin: 30px 0 15px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.stat-panel {
+  border: 3px solid;
+  border-radius: 21px;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  padding: 40px 0;
+}
+
+.stat-panel-text {
+  color: #fff;
+}
+
+.section-donate-block1 {
+  background: rgba(0, 0, 0, 0) url("../img/bg/donate.jpg") repeat scroll 0 0 / cover ;
+  height: 400px;
+  width: 100%;
+  padding: 80px 0 20px;
+}
+
+.section-donate-block2 {
+  background-color: #3b4561;
+  background-image: -moz-linear-gradient(0px 50% , transparent 90%, #475577 50%);
+  background-size: 10px auto;
+  height: 400px;
+  padding: 40px 0 60px;
+  width: 100%;
+}
+
+.bduu {
+  color: #fac51c;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 35px;
+  padding: 0 15px 0 35px;
+  text-transform: uppercase;
+}
+
+.bduur {
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 15px;
+  margin: 0 0 30px;
+  padding: 0 15px 0 35px;
+  text-transform: uppercase;
+}
+
+.feedback {
+  background: #475577 none repeat scroll 0 0;
+  border-radius: 11px;
+  margin: 15px 20px 45px 35px;
+  max-width: 380px;
+  padding: 20px 15px 20px 20px;
+}
+
+.section-diagram1 {
+  background: #3b4561 none repeat scroll 0 0;
+  height: 400px;
+  padding: 80px 0 20px;
+}
+
+
+.section-diagram1 {
+  background: rgba(0, 0, 0, 0) linear-gradient(to left, rgba(59, 69, 97, 1) 0px, rgba(59, 69, 97, 0.3)) repeat scroll 0 0;
+  height: 400px;
+  padding: 50px 0;
+}
+
+.section-diagram2 {
+  background: rgba(0, 0, 0, 0) linear-gradient(to right, rgba(59, 69, 97, 0.9) 0px, rgba(59, 69, 97, 0.3)) repeat scroll 0 0;
+  height: 400px;
+  padding: 50px 0;
+}
+
+.line-chart {
+  background-color: #eb6b56;
+  background-image: linear-gradient(45deg, transparent, transparent 48%, #e14938 48%, #e14938 52%, transparent 52%);
+  background-size: 15px 15px;
+  width: 100%;
+}
+
+.line-chart-green {
+  background-color: #61bd6d;
+  background-image: linear-gradient(45deg, transparent, transparent 48%, #41a85f 48%, #41a85f 52%, transparent 52%);
+  background-size: 15px 15px;
+  width: 100%;
+}
+
+.line-chart-text {
+  background: #e14938 none repeat scroll 0 0;
+  color: #fff;
+  height: 100px;
+  text-align: center;
+}
+
+.line-chart-text-1 {
+  background: #41a85f none repeat scroll 0 0;
+  color: #fff;
+  height: 100px;
+  margin: 150px 0 0;
+  text-align: center;
+}
+
+.line-chart-text > h3 {
+  font-size: 40px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 40px;
+  margin: 0 0 -10px;
+  padding: 20px 0 0;
+  text-align: center;
+}
+
+.line-chart-text-1 > h3 {
+  font-size: 40px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 40px;
+  margin: 0 0 -10px;
+  padding: 20px 0 0;
+  text-align: center;
+}
+
+.dbg-fd {
+  background: rgba(0, 0, 0, 0) url("../img/bg/dbf.jpg") repeat scroll 0 0 / cover ;
+}
+
+.dbg-fs {
+  background: rgba(0, 0, 0, 0) url("../img/bg/dbs.jpg") repeat scroll 0 0 / cover ;
+}
+
+.modaldonate{
+  background: rgba(0, 0, 0, 0) url("../img/bg/donatemodal.jpg") repeat scroll 0 0 / cover !important;
+}
+
+.uk-float-right.dnpbtn {
+  margin: 10px 0 0;
+}
+
+.section-info1 {
+  background-color: #3b4561;
+  background-image: -moz-linear-gradient(0px 50% , transparent 90%, #475577 50%);
+  background-size: 10px auto;
+  padding: 0 0 40px;
+}
+
+.section-news {
+  background-color: #3b4561;
+  background-image: -moz-linear-gradient(0px 50% , transparent 90%, #475577 50%);
+  background-size: 10px auto;
+  padding: 40px 0;
+}
+
+.footer {
+  background: rgba(0, 0, 0, 0) linear-gradient(to left, #414b67 0px, #28324e) repeat scroll 0 0;
+  color: #475577;
+  padding: 10px 0;
+}
+
+.footer hr {
+  border-color: #475577;
+}
+
+.footer a {
+  color: #fff;
+  
+  padding: 0 10px;
+}
+
+.footer a:hover {
+  color: #fac51c;
+  text-decoration: none;
+}
+
+.call {
+  border: 1px dashed #7785a7;
+  border-radius: 6px;
+  color: #fff;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+  height: 35px;
+  line-height: 35px;
+  margin: 22px 0 0 15px;
+  padding: 0 20px;
+}
+
+.gototop {
+  display: inline-block;
+  left: 50%;
+  margin-left: -35px;
+  padding: 0 !important;
+  position: absolute;
+  width: 70px;
+}
+
+.news-page {
+  background-color: #3b4561;
+  background-image: -moz-linear-gradient(0px 50% , transparent 90%, #475577 50%);
+  background-size: 10px auto;
+  padding: 0 0 25px;
+}
+
+.uk-margin-medium-bottom {
+  margin-bottom: 25px !important;
+}
+
+.mountains {
+  background: rgba(0, 0, 0, 0) url("../img/bg/mountain.jpg") repeat scroll 0 0 / cover ;
+}
+
+.trnm {
+  background: rgba(0, 0, 0, 0) url("../img/train/l.png") repeat scroll 0 0 / contain ;
+  height: 220px;
+  text-align: center;
+  width: 100%;
+}
+
+.locomotive {
+  background: rgba(0, 0, 0, 0) url("../img/train/l1.png") repeat scroll 0 0;
+  background-size: contain;
+}
+
+.trnm-logo > img {
+  height: 80px;
+  margin: 14px 0 0;
+}
+
+.utrain {
+  padding-top: 330px !important;
+}
+
+.train-next-arrow {
+  background: #3d8eb9 none repeat scroll 0 0;
+  border-radius: 50%;
+  color: #fac51c !important;
+  display: block !important;
+}
+
+.dfvg {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 40px;
+  padding: 16px 0 1px;
+}
