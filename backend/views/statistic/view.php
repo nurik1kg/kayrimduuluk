@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Sponsor */
+/* @var $model app\models\Statistic */
 
-$this->title = 'Өнөктөш (Спонсор)';
-//$this->params['breadcrumbs'][] = ['label' => 'Sponsors', 'url' => ['index']];
+$this->title = $model->id;
+//$this->params['breadcrumbs'][] = ['label' => 'Statistics', 'url' => ['index']];
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="sponsor-view">
+<div class="statistic-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -29,8 +29,9 @@ $this->title = 'Өнөктөш (Спонсор)';
         'model' => $model,
         'attributes' => [
             'id',
-            'name',
-            'photo',
+            'helped',
+            'help',
+            'date',
         ],
     ]) ?>
 

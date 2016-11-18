@@ -30,7 +30,7 @@ class Galery extends \yii\db\ActiveRecord
             [['photo', 'childid'], 'required'],
             [['childid'], 'integer'],
             [['photo'], 'string', 'max' => 256],
-            [['childid'], 'exist', 'skipOnError' => true, 'targetClass' => Child::className(), 'targetAttribute' => ['childid' => 'id']],
+            [['childid'], 'exist', 'skipOnError' => true, 'targetClass' => News::className(), 'targetAttribute' => ['childid' => 'id']],
         ];
     }
 

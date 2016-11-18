@@ -40,9 +40,9 @@ AppAsset::register($this);
 
         } else {
             $menuItems[]=['label' => 'Башкы бет', 'url' => ['/site/index']];
-            $menuItems[]=['label' => 'Балдар', 'url' => ['/child/index']];
-            $menuItems[]=['label' => 'Камкорчулар', 'url' => ['/consern/index']];
+            $menuItems[]=['label' => 'Жаңылыктар', 'url' => ['/news/index']];
             $menuItems[]=['label' => 'Өнөктөштөр', 'url' => ['/sponsor/index']];
+            $menuItems[]=['label' => 'Белгилүү инсандар', 'url' => ['/people/index']];
 
             $menuItems2[] = '<li class="dropdown">
                 <a class="dropdown-toggle" href="#" data-toggle="dropdown">'.Yii::$app->user->identity->username. '<span class="caret"></span></a>

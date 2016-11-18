@@ -32,7 +32,8 @@
         "2amigos/yii2-google-maps-library": "*",
         "kartik-v/yii2-widget-datetimepicker": "*",
         "kartik-v/yii2-widget-select2": "@dev",
-        "vivekmarakana/yii2-dynamicform": "dev-master"
+        "vivekmarakana/yii2-dynamicform": "dev-master",
+        "mihaildev/yii2-ckeditor": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

@@ -8,6 +8,7 @@ use yii\helpers\Url;
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <title><?= $this->title ?></title>
+    <link rel="shortcut icon" href="/style/favicon.ico" type="image/png">
     <link rel="shortcut icon" href="/style/img/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon-precomposed" href="/style/img/apple-touch-icon.png">
     <link rel="stylesheet" href="/style/css/bagyt.css">

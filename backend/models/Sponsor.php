@@ -41,7 +41,7 @@ class Sponsor extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
+            'name' => 'Аты',
             'photo' => 'Photo',
         ];
     }
