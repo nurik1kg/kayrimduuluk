@@ -19,29 +19,13 @@ use yii\widgets\ActiveForm;
 
     <div class="col-lg-9">
         <?= $form->field($model, 'title_kg')->textInput(['maxlength' => true]) ?>
-        <?= $form->field($model, 'text_kg')->widget(CKEditor::className(),[
-        'editorOptions' => [
-        'preset' => 'full', //разработанны стандартные настройки basic, standard, full данную возможность не обязательно использовать
-        'inline' => false, //по умолчанию false
-        ],
-        ]); ?>
-
+        <?= $form->field($model, 'text_kg')->textarea(['rows' => 10]);?>
 
         <?= $form->field($model, 'title_ru')->textInput(['maxlength' => true]) ?>
-        <?= $form->field($model, 'text_ru')->widget(CKEditor::className(),[
-            'editorOptions' => [
-                'preset' => 'full', //разработанны стандартные настройки basic, standard, full данную возможность не обязательно использовать
-                'inline' => false, //по умолчанию false
-            ],
-        ]); ?>
+        <?= $form->field($model, 'text_ru')->textarea(['rows' => 10]);?>
 
         <?= $form->field($model, 'title_en')->textInput(['maxlength' => true]) ?>
-        <?= $form->field($model, 'text_en')->widget(CKEditor::className(),[
-            'editorOptions' => [
-                'preset' => 'full', //разработанны стандартные настройки basic, standard, full данную возможность не обязательно использовать
-                'inline' => false, //по умолчанию false
-            ],
-        ]); ?>
+        <?= $form->field($model, 'text_en')->textarea(['rows' => 10]);?>
 
         <?= $form->field($model, 'imageFile')->widget(FileInput::className(), [
             'language' => 'ru',

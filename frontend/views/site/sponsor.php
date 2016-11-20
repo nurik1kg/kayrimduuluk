@@ -13,15 +13,14 @@ $this->title = Yii::t('app','sponsors');
             <div class="uk-slidenav-position" data-uk-slider="{autoplay:false, autoplayInterval:1500}">
                 <div class="uk-slider-container">
                     <ul class="uk-slider uk-grid-width-medium-1-4">
+
+                        <?php foreach ($sponsors as $sponsor){?>
                         <li>
                             <div class="trnm">
+                                <div class="trnm-logo"><img src="<?='/'.Yii::$app->params['urlSponsor'].$sponsor->photo?>"></div>
                             </div>
                         </li>
-                        <li>
-                            <div class="trnm">
-                                <div class="trnm-logo"><img src="/style/img/sponsor/2.png"></div>
-                            </div>
-                        </li>
+                        <?php } ?>
                         <li>
                             <div class="trnm">
                                 <div class="trnm-logo"><img src="/style/img/sponsor/1.png"></div>
@@ -29,26 +28,6 @@ $this->title = Yii::t('app','sponsors');
                         </li>
                         <li>
                             <div class="trnm locomotive">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="trnm">
-
-                            </div>
-                        </li>
-                        <li>
-                            <div class="trnm">
-
-                            </div>
-                        </li>
-                        <li>
-                            <div class="trnm">
-
-                            </div>
-                        </li>
-                        <li>
-                            <div class="trnm">
-
                             </div>
                         </li>
                     </ul>

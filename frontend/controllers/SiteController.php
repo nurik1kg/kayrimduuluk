@@ -1,6 +1,8 @@
 <?php
 namespace frontend\controllers;
 
+use app\models\Sponsor;
+use app\models\Statistic;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
@@ -72,7 +74,10 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $statistic = Statistic::findOne(1);
+        return $this->render('index',[
+            'statistic' => $statistic,
+        ]);
     }
 
     /**
@@ -215,8 +220,10 @@ class SiteController extends Controller
      */
     public function actionSponsors()
     {
-
-        return $this->render('sponsor');
+        $model = Sponsor::find()->all();
+        return $this->render('sponsor',[
+            'sponsors'=>$model,
+        ]);
     }
 
     public function  actionNews(){

@@ -31,24 +31,24 @@ use yii\helpers\Url;
 <div class="top">
     <div class="uk-grid uk-grid-collapse">
         <div class="uk-width-1-3">
-            <div class="call"><span class="uk-icon-phone-square"> +996 777 555 444</div>
+            <div class="call"><span class="uk-icon-phone-square"><?=' '.Yii::t('app','source_number')?></div>
         </div>
         <div class="uk-width-1-3">
             <div class="uk-text-center"><div class="logo"><a href=""><img src="/style/img/logo_bagyt.png"></a></div></div>
         </div>
         <div class="uk-width-1-3">
             <div class="uk-float-right dnpbtn">
-                <a href="#modal-donate" data-uk-modal="{center:true}" class="uk-button uk-button-primary uk-margin-top uk-margin-right uk-border-rounded">Жардам берүү</a>
+                <a href="#modal-donate" data-uk-modal="{center:true}" class="uk-button uk-button-primary uk-margin-top uk-margin-right uk-border-rounded"><?=Yii::t('app','to_help')?></a>
                 <div id="modal-donate" class="uk-modal modaldonate">
                     <div class="uk-modal-dialog uk-border-rounded" style="max-width: 350px;">
                         <button class="uk-modal-close uk-close" type="button"></button>
                         <form class="uk-form">
                             <fieldset data-uk-margin>
-                                <legend>Жардам берүү анкетасы</legend>
-                                <p><input type="text" placeholder="Аты жөнүңүз" class="uk-width-1-1"></p>
-                                <p><input type="text" placeholder="Телефон номуруңуз" class="uk-width-1-1"></p>
-                                <p><input type="text" placeholder="E-mail" class="uk-width-1-1"></p>
-                                <button class="uk-button uk-button-primary uk-border-rounded uk-width-1-1">Жөнөттүү</button>
+                                <legend><?=Yii::t('app','help_anket')?></legend>
+                                <p><input type="text" placeholder="<?=Yii::t('app','anket_names')?>" class="uk-width-1-1"></p>
+                                <p><input type="text" placeholder="<?=Yii::t('app','anket_phone')?>" class="uk-width-1-1"></p>
+                                <p><input type="text" placeholder="<?=Yii::t('app','anket_email')?>" class="uk-width-1-1"></p>
+                                <button class="uk-button uk-button-primary uk-border-rounded uk-width-1-1"><?=Yii::t('app','anket_send')?></button>
                         </form>
                     </div>
                 </div>
@@ -104,10 +104,10 @@ use yii\helpers\Url;
     <div class="uk-width uk-container-center uk-text-center uk-hidden-small" style="max-width: 850px">
         <div class="uk-text-center"><div class="logo"><a href=""><img src="/style/img/logo_bagyt.png"></a></div></div>
         <hr>
-        <a href="">Башкы бет</a> | <a href="">Демөөрчүлөр</a> | <a href="">Жаңылыктар</a> | <a href="">Фонд тууралуу</a> | <a href="">Белгилүү инсандар</a>
+        <a href="<?=Url::toRoute('site/index')?>"><?=Yii::t('app','page_index')?></a> | <a href="<?=Url::toRoute('site/sponsors')?>"><?=Yii::t('app','page_sponsors')?></a> | <a href="<?=Url::toRoute('site/news')?>"><?=Yii::t('app','page_news')?></a> | <a href="<?=Url::toRoute('site/about')?>"><?=Yii::t('app','page_about')?></a> | <a href="<?=Url::toRoute('site/great_names');?>"><?=Yii::t('app','page_people')?></a>
         <hr>
         <div style="height: 40px">
-            <div class="call uk-margin-remove uk-float-left"><span class="uk-icon-phone-square"> +996 777 555 444</div>
+            <div class="call uk-margin-remove uk-float-left"><span class="uk-icon-phone-square"><?=' '.Yii::t('app','source_number')?></div>
             <div class="arrow-bottom-animate"><a href="#top" data-uk-smooth-scroll="" class="gototop"><img src="/style/img/gotop.png"></a></div>
             <div class="uk-float-right">
                 <a href="#" class="uk-icon-button uk-icon-facebook-square"></a>
