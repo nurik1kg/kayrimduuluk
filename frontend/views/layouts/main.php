@@ -45,9 +45,9 @@ use yii\helpers\Url;
                         <form class="uk-form">
                             <fieldset data-uk-margin>
                                 <legend><?=Yii::t('app','help_anket')?></legend>
-                                <p><input type="text" placeholder="<?=Yii::t('app','anket_names')?>" class="uk-width-1-1"></p>
-                                <p><input type="text" placeholder="<?=Yii::t('app','anket_phone')?>" class="uk-width-1-1"></p>
-                                <p><input type="text" placeholder="<?=Yii::t('app','anket_email')?>" class="uk-width-1-1"></p>
+                                <p><input type="text" placeholder="<?=Yii::t('app','anket_names')?>" class="uk-width-1-1" required></p>
+                                <p><input type="text" placeholder="<?=Yii::t('app','anket_phone')?>" class="uk-width-1-1" required></p>
+                                <p><input type="email" placeholder="<?=Yii::t('app','anket_email')?>" class="uk-width-1-1" required></p>
                                 <button class="uk-button uk-button-primary uk-border-rounded uk-width-1-1"><?=Yii::t('app','anket_send')?></button>
                         </form>
                     </div>
@@ -60,9 +60,9 @@ use yii\helpers\Url;
 <div class="header">
     <nav class="uk-navbar">
         <div class="uk-navbar-nav">
-            <a href="#" class="lang lang-kg">KG</a>
-            <a href="#" class="lang">RU</a>
-            <a href="#" class="lang">EN</a>
+            <a href="<?=Url::toRoute(['site/lang','l'=>1])?>" class="<?=Yii::$app->language=='kg-KG'?'lang lang-kg':'lang'; ?>">KG</a>
+            <a href="<?=Url::toRoute(['site/lang','l'=>2])?>" class="<?=Yii::$app->language=='ru-RU'?'lang lang-kg':'lang'; ?>">RU</a>
+            <a href="<?=Url::toRoute(['site/lang','l'=>3])?>" class="<?=Yii::$app->language=='en-US'?'lang lang-kg':'lang'; ?>">EN</a>
         </div>
 
         <div class="uk-navbar-flip">

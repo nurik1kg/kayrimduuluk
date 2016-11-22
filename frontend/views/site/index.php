@@ -154,7 +154,7 @@ $this->title = Yii::t('app','home');
                             <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:100}"><?=Yii::t('app','uson9title')?></h2>
                             <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:100}"><?=Yii::t('app','uson9text')?></p>
 
-                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:500}"><a id="not" href="#modal-donate" data-uk-modal="{center:true}" class="uk-button uk-button-small uk-button-success uk-border-rounded">Жардам көрсөтүү</a></div>
+                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:500}"><a id="not" href="#modal-donate" data-uk-modal="{center:true}" class="uk-button uk-button-small uk-button-success uk-border-rounded"><?=Yii::t('app','i_helping')?></a></div>
                         </div>
                     </div>
                 </div>
@@ -197,7 +197,7 @@ $this->title = Yii::t('app','home');
                             <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:100}"><?=Yii::t('app','uson11title')?></h2>
                             <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:100}"><?=Yii::t('app','uson11text')?></p>
 
-                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:500}"><a id="not2" href="" class="uk-button uk-button-small uk-button-success uk-border-rounded">Жардам көрсөтүү</a></div>
+                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:500}"><a id="not2" href="#modal-donate" data-uk-modal="{center:true}" class="uk-button uk-button-small uk-button-success uk-border-rounded"><?=Yii::t('app','i_helping')?></a></div>
                         </div>
                     </div>
                 </div>
@@ -240,7 +240,7 @@ $this->title = Yii::t('app','home');
                             <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:100}"><?=Yii::t('app','uson15title')?></h2>
                             <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:300}"><?=Yii::t('app','uson15text')?></p>
 
-                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:500}"><a id="not3" href="" class="uk-button uk-button-small uk-button-success uk-border-rounded"><?=Yii::t('app','aUson')?></a></div>
+                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:500}"><a id="not3" href="#modal-donate" data-uk-modal="{center:true}" class="uk-button uk-button-small uk-button-success uk-border-rounded"><?=Yii::t('app','i_helping')?></a></div>
                         </div>
                     </div>
                 </div>
@@ -284,7 +284,7 @@ $this->title = Yii::t('app','home');
                             <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:100}"><?=Yii::t('app','uson18title')?></h2>
                             <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:300}"><?=Yii::t('app','uson18text')?></p>
 
-                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:500}"><a id="not4" href="" class="uk-button uk-button-small uk-button-success uk-border-rounded">Жардам көрсөтүү</a></div>
+                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:500}"><a id="not4" href="#modal-donate" data-uk-modal="{center:true}" class="uk-button uk-button-small uk-button-success uk-border-rounded"><?=Yii::t('app','i_helping')?></a></div>
                         </div>
                     </div>
                 </div>
@@ -326,7 +326,7 @@ $this->title = Yii::t('app','home');
                             <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-scale-down', repeat: true, delay:400}"><?=Yii::t('app','aUson')?></h2>
                             <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:100}"><?=Yii::t('app','uson23title')?></h2>
                             <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:300}"><?=Yii::t('app','uson23text')?></p>
-                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:500}"><a id="not1" href="" class="uk-button uk-button-small uk-button-success uk-border-rounded">Жардам көрсөтүү</a></div>
+                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:500}"><a id="not1" href="#modal-donate" data-uk-modal="{center:true}" class="uk-button uk-button-small uk-button-success uk-border-rounded"><?=Yii::t('app','i_helping')?></a></div>
                         </div>
                     </div>
                 </div>
@@ -370,7 +370,7 @@ $this->title = Yii::t('app','home');
                             <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:100}"><?=Yii::t('app','uson27title')?></h2>
                             <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:300}"><?=Yii::t('app','uson27title')?></p>
 
-                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:500}"><a id="not1" href="" class="uk-button uk-button-small uk-button-success uk-border-rounded">Жардам көрсөтүү</a></div>
+                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:500}"><a id="not1" href="#modal-donate" data-uk-modal="{center:true}" class="uk-button uk-button-small uk-button-success uk-border-rounded"><?=Yii::t('app','i_helping')?></a></div>
                         </div>
                     </div>
                 </div>
@@ -466,39 +466,85 @@ $this->title = Yii::t('app','home');
     <div class="uk-container uk-container-center">
         <div class="uk-width uk-container-center uk-text-center uk-hidden-small" style="max-width: 850px">
             <div class="uk-grid" data-uk-scrollspy="{cls:'uk-animation-fade', target:'.fnews', delay:100, repeat: true}">
-                <div class="uk-width-1-3 fnews">
-                    <div class="uk-panel uk-panel-box">
-                        <div class="uk-panel-teaser">
-                            <img src="/style/img/news/news1.png">
-                        </div>
-                        <h3 class="uk-margin-bottom-remove"><strong>"Билал Кидс" соода маркасы</strong></h3>
-                        <p class="uk-text-muted uk-margin-top-remove">04.11.16</p>
-                        <p class="uk-margin-bottom">"Билал Кидс" соода маркасы мектеп интернатынын окуучуларын 350 жаңы баш кийимдер менен кубантышты. </p>
-                        <a href="" class="uk-button uk-button-primary uk-border-rounded">Уландысы...</a>
-                    </div>
-                </div>
-                <div class="uk-width-1-3 fnews">
-                    <div class="uk-panel uk-panel-box">
-                        <div class="uk-panel-teaser">
-                            <img src="/style/img/news/news2.png">
-                        </div>
-                        <h3 class="uk-margin-bottom-remove"><strong>Жайкы эс алуу<br> лагерь</strong></h3>
-                        <p class="uk-text-muted uk-margin-top-remove">04.11.16</p>
-                        <p class="uk-margin-bottom">2016 - жылкы жайкы эс алуу лагерибизге белгилүү режиссер Сүйүн Откеев агабыз "Мегатой" тасмасы менен келип, балдарга... </p>
-                        <a href="" class="uk-button uk-button-primary uk-border-rounded">Уландысы...</a>
-                    </div>
-                </div>
-                <div class="uk-width-1-3 fnews">
-                    <div class="uk-panel uk-panel-box">
-                        <div class="uk-panel-teaser">
-                            <img src="/style/img/news/news.png">
-                        </div>
-                        <h3 class="uk-margin-bottom-remove"><strong>1 - сентябрь окуу күнүндө</strong></h3>
-                        <p class="uk-text-muted uk-margin-top-remove">04.11.16</p>
-                        <p class="uk-margin-bottom">1 - сентябрь окуу күнүндө ар бир бала мектепке бараарда толкунданып, өзгөчө сезимдер коштоп турат.</p>
-                        <a href="" class="uk-button uk-button-primary uk-border-rounded">Уландысы...</a>
-                    </div>
-                </div>
+                <?php
+                $news = \app\models\News::find()->orderBy(['date' => SORT_DESC])->all();
+                $flag = 0;
+                foreach ($news as $new){
+                    if(Yii::$app->language == 'kg-KG'){
+                        if(!empty($new->title_kg) && !empty($new->text_kg)){
+                            if($flag == 3)
+                                break;
+                            $flag++;
+                            if(strlen($new->text_kg)>=100)
+                                $mini_content = substr($new->text_kg,0,100).'...';
+                            else
+                                $mini_content =substr($new->text_kg,0,strlen($new->text_kg)).'...';
+                            ?>
+                            <div class="uk-width-1-3 fnews">
+                                <div class="uk-panel uk-panel-box">
+                                    <div class="uk-panel-teaser">
+                                        <img src="<?='/'.Yii::$app->params['urlNews'].$new->photo?>">
+                                    </div>
+                                    <h3 class="uk-margin-bottom-remove"><strong><?=$new->title_kg?></strong></h3>
+                                    <p class="uk-text-muted uk-margin-top-remove"><?=$new->date?></p>
+                                    <p class="uk-margin-bottom"><?=$mini_content?></p>
+                                    <a href="<?=\yii\helpers\Url::toRoute(['news/info','id'=>$new->id])?>" class="uk-button uk-button-primary uk-border-rounded"><?=Yii::t('app','more_info_news')?></a>
+                                </div>
+                            </div>
+                        <?php
+                        }
+                    }
+                    if(Yii::$app->language == 'ru-RU'){
+                        if(!empty($new->title_ru) && !empty($new->text_ru)){
+                            if($flag == 3)
+                                break;
+                            $flag++;
+                            if(strlen($new->text_ru)>=100)
+                                $mini_content = substr($new->text_ru,0,100).'...';
+                            else
+                                $mini_content =substr($new->text_ru,0,strlen($new->text_ru)).'...';
+                            ?>
+                            <div class="uk-width-1-3 fnews">
+                                <div class="uk-panel uk-panel-box">
+                                    <div class="uk-panel-teaser">
+                                        <img src="<?='/'.Yii::$app->params['urlNews'].$new->photo?>">
+                                    </div>
+                                    <h3 class="uk-margin-bottom-remove"><strong><?=$new->title_ru?></strong></h3>
+                                    <p class="uk-text-muted uk-margin-top-remove"><?=$new->date?></p>
+                                    <p class="uk-margin-bottom"><?=$mini_content?></p>
+                                    <a href="<?=\yii\helpers\Url::toRoute(['news/info','id'=>$new->id])?>" class="uk-button uk-button-primary uk-border-rounded"><?=Yii::t('app','more_info_news')?></a>
+                                </div>
+                            </div>
+                            <?php
+                        }
+                    }
+                    if(Yii::$app->language == 'en-US'){
+                        if(!empty($new->title_en) && !empty($new->text_en)){
+                            if($flag == 3)
+                                break;
+                            $flag++;
+                            if(strlen($new->text_en)>=100)
+                                $mini_content = substr($new->text_en,0,100).'...';
+                            else
+                                $mini_content =substr($new->text_en,0,strlen($new->text_en)).'...';
+                            ?>
+                            <div class="uk-width-1-3 fnews">
+                                <div class="uk-panel uk-panel-box">
+                                    <div class="uk-panel-teaser">
+                                        <img src="<?='/'.Yii::$app->params['urlNews'].$new->photo?>">
+                                    </div>
+                                    <h3 class="uk-margin-bottom-remove"><strong><?=$new->title_en?></strong></h3>
+                                    <p class="uk-text-muted uk-margin-top-remove"><?=$new->date?></p>
+                                    <p class="uk-margin-bottom"><?=$mini_content?></p>
+                                    <a href="<?=\yii\helpers\Url::toRoute(['news/info','id'=>$new->id])?>" class="uk-button uk-button-primary uk-border-rounded"><?=Yii::t('app','more_info_news')?></a>
+                                </div>
+                            </div>
+                            <?php
+                        }
+                    }
+                }
+                ?>
+
             </div>
         </div>
     </div>

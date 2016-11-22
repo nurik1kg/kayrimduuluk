@@ -1,10 +1,14 @@
 <?php
 namespace frontend\controllers;
 
+use app\models\News;
+use app\models\People;
 use app\models\Sponsor;
 use app\models\Statistic;
 use Yii;
 use yii\base\InvalidParamException;
+use yii\data\Pagination;
+use yii\helpers\Url;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -227,12 +231,90 @@ class SiteController extends Controller
     }
 
     public function  actionNews(){
-
-        return $this->render('news');
+        switch (Yii::$app->language){
+            case 'kg-KG':{
+                $query = News::find()->where(['not', ['title_kg'=>null]])->andWhere(['not', ['text_kg' => null]]);
+                break;
+            }
+            case 'ru-RU':{
+                $query = News::find()->where(['not', ['title_ru'=>null]])->andWhere(['not', ['text_ru' => null]]);
+                break;
+            }
+            case 'en-US':{
+                $query = News::find()->where(['not', ['title_en'=>null]])->andWhere(['not', ['text_en' => null]]);
+                break;
+            }
+            default : {
+                $query = News::find()->where(['not', ['title_kg'=>null]])->andWhere(['not', ['text_kg' => null]]);
+            }
+        }
+//        $query = News::find();
+        $pagination = new Pagination([
+            'defaultPageSize' => 4,
+            'totalCount' =>$query->count(),
+        ]);
+        $news = $query->orderBy('date')
+            ->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+        return $this->render('news',[
+            'news' => $news,
+            'pagination' => $pagination,
+        ]);
     }
 
     public function actionGreat_names(){
+        switch (\Yii::$app->language){
+            case 'kg-KG':{
+                $query = People::find()->where(['not', ['name_kg'=>null]])->andWhere(['not', ['content_kg' => null]])->all();
+                $lang =1;
+                break;
+            }
+            case 'ru-RU':{
+                $query = People::find()->where(['not', ['name_ru'=>null]])->andWhere(['not', ['content_ru' => null]])->all();
+                $lang =2;
+                break;
+            }
+            case 'en-US':{
+                $query = People::find()->where(['not', ['name_en'=>null]])->andWhere(['not', ['content_en' => null]])->all();
+                $lang =3;
+                break;
+            }
+            default: {
+                $query = People::find()->where(['not', ['name_kg'=>null]])->andWhere(['not', ['content_kg' => null]])->all();
+                $lang =1;
+            }
+        }
+        return $this->render('people',[
+            'peoples'=>$query,
+            'lang' => $lang,
+        ]);
+    }
 
-        return $this->render('people');
+    public function actionLang($l){
+        switch ($l){
+            case 1 : {
+                \Yii::$app->language = "kg-KG";
+//                \Yii::$app->session['_lang'] = "kg-KG";
+                break;
+            }
+            case 2 : {
+                \Yii::$app->language = "ru-RU";
+//                \Yii::$app->session['_lang'] = "ru-RU";
+                break;
+            }
+            case 3 : {
+                \Yii::$app->language = 'en-EN';
+//                \Yii::$app->session['_lang'] = "en-EN";
+                break;
+            }
+            default : {
+                \Yii::$app->language = 'kg-KG';
+//                \Yii::$app->session['_lang'] = "kg-KG";
+                break;
+            }
+        }
+//        return Yii::$app->language;
+        return $this->redirect(Url::previous());
     }
 }

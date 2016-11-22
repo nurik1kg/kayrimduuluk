@@ -1,60 +1,108 @@
 <?php
+use yii\widgets\LinkPager;
+
 $this->title = Yii::t('app','news');
 ?>
 <div class="news-page">
     <div class="uk-width uk-container-center uk-text-center" style="max-width: 850px">
-        <h1 class="info-title" style="display: inline-block">Фондтун жаңылыктары</h1>
+        <h1 class="info-title" style="display: inline-block"><?=Yii::t('app','news_of')?></h1>
         <div class="uk-grid uk-grid-medium uk-margin-large-top" data-uk-scrollspy="{cls:'uk-animation-fade', target:'.fnews', delay:300, repeat: true}">
-            <div class="uk-width-1-2 fnews">
-                <div class="uk-panel uk-panel-box uk-margin-medium-bottom">
-                    <div class="uk-panel-teaser">
-                        <img src="/style/img/news/news1.png">
-                    </div>
-                    <h3 class="uk-margin-bottom-remove"><strong>"Билал Кидс" соода маркасы</strong></h3>
-                    <p class="uk-text-muted uk-margin-top-remove">04.11.16</p>
-                    <p class="uk-margin-bottom">"Билал Кидс" соода маркасы мектеп интернатынын окуучуларын 350 жаңы баш кийимдер менен кубантышты. </p>
-                    <a href="item.html" class="uk-button uk-button-primary uk-border-rounded">Уландысы...</a>
-                </div>
-            </div>
-            <div class="uk-width-1-2 fnews">
-                <div class="uk-panel uk-panel-box uk-margin-medium-bottom">
-                    <div class="uk-panel-teaser">
-                        <img src="/style/img/news/news2.png">
-                    </div>
-                    <h3 class="uk-margin-bottom-remove"><strong>"Билал Кидс" соода маркасы</strong></h3>
-                    <p class="uk-text-muted uk-margin-top-remove">04.11.16</p>
-                    <p class="uk-margin-bottom">"Билал Кидс" соода маркасы мектеп интернатынын окуучуларын 350 жаңы баш кийимдер менен кубантышты. </p>
-                    <a href="item.html" class="uk-button uk-button-primary uk-border-rounded">Уландысы...</a>
-                </div>
-            </div>
-            <div class="uk-width-1-2 fnews">
-                <div class="uk-panel uk-panel-box uk-margin-medium-bottom">
-                    <div class="uk-panel-teaser">
-                        <img src="/style/img/news/news.png">
-                    </div>
-                    <h3 class="uk-margin-bottom-remove"><strong>"Билал Кидс" соода маркасы</strong></h3>
-                    <p class="uk-text-muted uk-margin-top-remove">04.11.16</p>
-                    <p class="uk-margin-bottom">"Билал Кидс" соода маркасы мектеп интернатынын окуучуларын 350 жаңы баш кийимдер менен кубантышты. </p>
-                    <a href="" class="uk-button uk-button-primary uk-border-rounded">Уландысы...</a>
-                </div>
-            </div>
-            <div class="uk-width-1-2 fnews">
-                <div class="uk-panel uk-panel-box uk-margin-medium-bottom">
-                    <div class="uk-panel-teaser">
-                        <img src="/style/img/news/news1.png">
-                    </div>
-                    <h3 class="uk-margin-bottom-remove"><strong>"Билал Кидс" соода маркасы</strong></h3>
-                    <p class="uk-text-muted uk-margin-top-remove">04.11.16</p>
-                    <p class="uk-margin-bottom">"Билал Кидс" соода маркасы мектеп интернатынын окуучуларын 350 жаңы баш кийимдер менен кубантышты. </p>
-                    <a href="" class="uk-button uk-button-primary uk-border-rounded">Уландысы...</a>
-                </div>
-            </div>
+
+            <?php switch (Yii::$app->language){
+                case 'kg-KG':{
+                    foreach ($news as $new){
+                        if(strlen($new->text_kg)>= 100)
+                            $mini_text = substr($new->text_kg,0,100);
+                        else
+                            $mini_text = substr($new->text_kg,0,strlen($new->text_kg));
+                        ?>
+                        <div class="uk-width-1-2 fnews">
+                            <div class="uk-panel uk-panel-box uk-margin-medium-bottom">
+                                <div class="uk-panel-teaser">
+                                    <img src="<?='/'.Yii::$app->params['urlNews'].$new->photo?>">
+                                </div>
+                                <h3 class="uk-margin-bottom-remove"><strong><?=$new->title_kg?></strong></h3>
+                                <p class="uk-text-muted uk-margin-top-remove"><?=date("d.m.y",strtotime($new->date))?></p>
+                                <p class="uk-margin-bottom"><?=$mini_text?></p>
+                                <a href="<?=\yii\helpers\Url::toRoute(['news/info','id'=>$new->id])?>" class="uk-button uk-button-primary uk-border-rounded"><?=Yii::t('app','more_info_news')?></a>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                    break;
+                }
+                case 'ru-RU':{
+                    foreach ($news as $new){
+                        if(strlen($new->text_ru)>= 100)
+                            $mini_text = substr($new->text_ru,0,100);
+                        else
+                            $mini_text = substr($new->text_ru,0,strlen($new->text_ru));
+                        ?>
+                        <div class="uk-width-1-2 fnews">
+                            <div class="uk-panel uk-panel-box uk-margin-medium-bottom">
+                                <div class="uk-panel-teaser">
+                                    <img src="<?='/'.Yii::$app->params['urlNews'].$new->photo?>">
+                                </div>
+                                <h3 class="uk-margin-bottom-remove"><strong><?=$new->title_ru?></strong></h3>
+                                <p class="uk-text-muted uk-margin-top-remove"><?=date("d.m.y",strtotime($new->date))?></p>
+                                <p class="uk-margin-bottom"><?=$mini_text?></p>
+                                <a href="<?=\yii\helpers\Url::toRoute(['news/info','id'=>$new->id])?>" class="uk-button uk-button-primary uk-border-rounded"><?=Yii::t('app','more_info_news')?></a>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                    break;
+                }
+                case 'en-US':{
+                    foreach ($news as $new){
+                        if(strlen($new->text_en)>= 100)
+                            $mini_text = substr($new->text_en,0,100);
+                        else
+                            $mini_text = substr($new->text_en,0,strlen($new->text_en));
+                        ?>
+                        <div class="uk-width-1-2 fnews">
+                            <div class="uk-panel uk-panel-box uk-margin-medium-bottom">
+                                <div class="uk-panel-teaser">
+                                    <img src="<?='/'.Yii::$app->params['urlNews'].$new->photo?>">
+                                </div>
+                                <h3 class="uk-margin-bottom-remove"><strong><?=$new->title_en?></strong></h3>
+                                <p class="uk-text-muted uk-margin-top-remove"><?=date("d.m.y",strtotime($new->date))?></p>
+                                <p class="uk-margin-bottom"><?=$mini_text?></p>
+                                <a href="<?=\yii\helpers\Url::toRoute(['news/info','id'=>$new->id])?>" class="uk-button uk-button-primary uk-border-rounded"><?=Yii::t('app','more_info_news')?></a>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                    break;
+                }
+                default : {
+                    foreach ($news as $new){
+                        if(strlen($new->text_kg)>= 100)
+                            $mini_text = substr($new->text_kg,0,100);
+                        else
+                            $mini_text = substr($new->text_kg,0,strlen($new->text_kg));
+                        ?>
+                        <div class="uk-width-1-2 fnews">
+                            <div class="uk-panel uk-panel-box uk-margin-medium-bottom">
+                                <div class="uk-panel-teaser">
+                                    <img src="<?='/'.Yii::$app->params['urlNews'].$new->photo?>">
+                                </div>
+                                <h3 class="uk-margin-bottom-remove"><strong><?=$new->title_kg?></strong></h3>
+                                <p class="uk-text-muted uk-margin-top-remove"><?=date("d.m.y",strtotime($new->date))?></p>
+                                <p class="uk-margin-bottom"><?=$mini_text?></p>
+                                <a href="<?=\yii\helpers\Url::toRoute(['news/info','id'=>$new->id])?>" class="uk-button uk-button-primary uk-border-rounded"><?=Yii::t('app','more_info_news')?></a>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                }
+            }
+            ?>
         </div>
     </div>
-    <ul class="uk-pagination">
-        <li class="uk-disabled"><span><i class="uk-icon-angle-double-left"></i></span></li>
-        <li class="uk-active"><span>1</span></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#"><i class="uk-icon-angle-double-right"></i></a></li>
-    </ul>
+    <?= LinkPager::widget([
+        'pagination' => $pagination,
+        'options'=>['class'=>'uk-pagination'],
+        'activePageCssClass' => ['class' => 'uk-active', 'style'=>'text'],
+    ]) ?>
 </div>

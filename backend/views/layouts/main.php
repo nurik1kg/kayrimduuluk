@@ -43,6 +43,7 @@ AppAsset::register($this);
             $menuItems[]=['label' => 'Жаңылыктар', 'url' => ['/news/index']];
             $menuItems[]=['label' => 'Өнөктөштөр', 'url' => ['/sponsor/index']];
             $menuItems[]=['label' => 'Белгилүү инсандар', 'url' => ['/people/index']];
+            $menuItems[]=['label' => 'Фонд тууралуу', 'url' => ['/fond/index']];
 
             $menuItems2[] = '<li class="dropdown">
                 <a class="dropdown-toggle" href="#" data-toggle="dropdown">'.Yii::$app->user->identity->username. '<span class="caret"></span></a>
