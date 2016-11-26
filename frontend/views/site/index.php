@@ -394,13 +394,15 @@ $this->title = Yii::t('app','home');
                     <h3 class="bduu" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true}"><?=Yii::t('app','title_s');?></h3>
                     <p class="bduur" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:200}"><?=Yii::t('app','mini_text_s');?></p>
                     <div class="feedback" data-uk-scrollspy="{cls:'uk-animation-scale-up', repeat: true, delay:100}">
+                        <form onsubmit="return Help_to2()">
                         <h3 class="uk-text-contrast"><?=Yii::t('app','jardam_beruu_anketasy')?></h3>
                         <div class="uk-form">
-                            <p><input placeholder="<?=Yii::t('app','anket_names') ?>" type="text" class="uk-form-large uk-width-1-1"></p>
-                            <p><input placeholder="<?=Yii::t('app','anket_phone') ?>" type="text" class="uk-form-large uk-width-1-1"></p>
-                            <p><input placeholder="<?=Yii::t('app','anket_email') ?>" type="text" class="uk-form-large uk-width-1-1"></p>
-                            <button class="uk-button uk-button-large uk-button-success uk-border-rounded" type="button"><?=Yii::t('app','submit_help') ?></button>
+                            <p><input placeholder="<?=Yii::t('app','anket_names') ?>" type="text" class="uk-form-large uk-width-1-1" id="aName2" required></p>
+                            <p><input placeholder="<?=Yii::t('app','anket_phone') ?>" type="text" class="uk-form-large uk-width-1-1" id="aPhone2" required></p>
+                            <p><input placeholder="<?=Yii::t('app','anket_email') ?>" type="email" class="uk-form-large uk-width-1-1" id="aEmail2" required></p>
+                            <input type="submit" class="uk-button uk-button-large uk-button-success uk-border-rounded" value="<?=Yii::t('app','submit_help') ?>">
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -299,30 +299,30 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionLang($l){
-        switch ($l){
-            case 1 : {
-                \Yii::$app->language = "kg-KG";
-//                \Yii::$app->session['_lang'] = "kg-KG";
+    public function actionHelping($name,$phone,$email){
+        Yii::$app->mail
+            ->compose()
+            ->setFrom($email)
+            ->setTo('nurik1kg@mail.ru')
+            ->setSubject('Жардам бергим келет!')
+            ->setTextBody("Аты жөнү: ".$name."     "."Телефон номери: ".$phone."       "."email : ".$email)
+            ->send();
+        switch (Yii::$app->language){
+            case 'kg-KG' : {
+                return 'Талабыңыз аткарылды. Чоң рахмат! Кайдыгер карабаганыз үчүн!';
                 break;
             }
-            case 2 : {
-                \Yii::$app->language = "ru-RU";
-//                \Yii::$app->session['_lang'] = "ru-RU";
+            case 'ru-RU' : {
+                return 'Заявка успешно отправлено.';
                 break;
             }
-            case 3 : {
-                \Yii::$app->language = 'en-EN';
-//                \Yii::$app->session['_lang'] = "en-EN";
+            case 'en-EN' : {
+                return 'Sending success!';
                 break;
             }
             default : {
-                \Yii::$app->language = 'kg-KG';
-//                \Yii::$app->session['_lang'] = "kg-KG";
-                break;
+                return 'Талабыңыз аткарылды. Чоң рахмат! Кайдыгер карабаганыз үчүн!';
             }
         }
-//        return Yii::$app->language;
-        return $this->redirect(Url::previous());
     }
 }

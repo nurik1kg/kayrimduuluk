@@ -38,7 +38,7 @@
                                 <?php
                                 break;
                             }
-                            case 'en-US':{
+                            case 'en-EN':{
                                 $gallery = \app\models\Galery::find()->where(['childid'=>$model->id])->all();
                                 ?>
                                 <h2 class="uk-margin-bottom-remove"><strong><?=$model->title_en?></strong></h2>

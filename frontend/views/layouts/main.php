@@ -44,12 +44,12 @@ use yii\helpers\Url;
                 <div id="modal-donate" class="uk-modal modaldonate">
                     <div class="uk-modal-dialog uk-border-rounded" style="max-width: 350px;">
                         <button class="uk-modal-close uk-close" type="button"></button>
-                        <form class="uk-form">
+                        <form class="uk-form" onsubmit="return Help_to()">
                             <fieldset data-uk-margin>
                                 <legend><?=Yii::t('app','help_anket')?></legend>
-                                <p><input type="text" placeholder="<?=Yii::t('app','anket_names')?>" class="uk-width-1-1" required></p>
-                                <p><input type="text" placeholder="<?=Yii::t('app','anket_phone')?>" class="uk-width-1-1" required></p>
-                                <p><input type="email" placeholder="<?=Yii::t('app','anket_email')?>" class="uk-width-1-1" required></p>
+                                <p><input type="text" placeholder="<?=Yii::t('app','anket_names')?>" class="uk-width-1-1" id="aName" required></p>
+                                <p><input type="text" placeholder="<?=Yii::t('app','anket_phone')?>" class="uk-width-1-1" id="aPhone" required></p>
+                                <p><input type="email" placeholder="<?=Yii::t('app','anket_email')?>" class="uk-width-1-1" id="aEmail" required></p>
                                 <button class="uk-button uk-button-primary uk-border-rounded uk-width-1-1"><?=Yii::t('app','anket_send')?></button>
                         </form>
                     </div>
@@ -131,6 +131,44 @@ use yii\helpers\Url;
 
 
 <script src="/style/js/javas.js"></script>
+<script>
+    function Help_to() {
+        var nameAnket = $('#aName').val();
+        var phoneAnket = $('#aPhone').val();
+        var emailAnket = $('#aEmail').val();
+        $.ajax({
+            url: '/site/helping',
+            type: "GET",
+            data: {'name':nameAnket,'phone':phoneAnket,'email':emailAnket},
+            success: function(data){
+                console.log(data);
+                alert(data);
+            },
+            error: function (data) {
+                console.log(data);
+                alert('Filed! '+data);
+            }
+        });
+    }
+    function Help_to2() {
+        var nameAnket = $('#aName2').val();
+        var phoneAnket = $('#aPhone2').val();
+        var emailAnket = $('#aEmail2').val();
+        $.ajax({
+            url: '/site/helping',
+            type: "GET",
+            data: {'name':nameAnket,'phone':phoneAnket,'email':emailAnket},
+            success: function(data){
+                console.log(data);
+                alert(data);
+            },
+            error: function (data) {
+                console.log(data);
+                alert('Filed! '+data);
+            }
+        });
+    }
+</script>
 <?php $this->endBody() ?>
 </body>
 </html>
