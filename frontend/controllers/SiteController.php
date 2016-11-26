@@ -3,8 +3,11 @@ namespace frontend\controllers;
 
 use app\models\News;
 use app\models\People;
+use app\models\Reports;
+use app\models\Schools;
 use app\models\Sponsor;
 use app\models\Statistic;
+use SebastianBergmann\CodeCoverage\Report\Xml\Report;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\data\Pagination;
@@ -147,7 +150,12 @@ class SiteController extends Controller
      */
     public function actionAbout()
     {
-        return $this->render('about');
+        $schools = Schools::find()->all();
+        $reports = Reports::find()->all();
+        return $this->render('about',[
+            'schools' => $schools,
+            'reports' => $reports,
+        ]);
     }
 
     /**

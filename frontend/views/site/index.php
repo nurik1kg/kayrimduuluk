@@ -320,13 +320,13 @@ $this->title = Yii::t('app','home');
                 <div class="uk-width uk-float-left" style="max-width:600px">
                     <div class="uk-grid uk-grid-collapse">
                         <div class="uk-width-medium-1-2">
-                            <div class="daddy4" data-uk-scrollspy="{cls:'uk-animation-scale-up', repeat: true, delay:100}"><a id="dad1" href="#d"></a></div>
+                            <div class="daddy4" data-uk-scrollspy="{cls:'uk-animation-scale-up', repeat: true, delay:100}"><a id="dad5" href="#d"></a></div>
                         </div>
                         <div class="uk-width-medium-1-2 uk-text-left">
                             <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-scale-down', repeat: true, delay:400}"><?=Yii::t('app','aUson')?></h2>
                             <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:100}"><?=Yii::t('app','uson23title')?></h2>
                             <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:300}"><?=Yii::t('app','uson23text')?></p>
-                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:500}"><a id="not1" href="#modal-donate" data-uk-modal="{center:true}" class="uk-button uk-button-small uk-button-success uk-border-rounded"><?=Yii::t('app','i_helping')?></a></div>
+                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:500}"><a id="not5" href="#modal-donate" data-uk-modal="{center:true}" class="uk-button uk-button-small uk-button-success uk-border-rounded"><?=Yii::t('app','i_helping')?></a></div>
                         </div>
                     </div>
                 </div>
@@ -363,14 +363,14 @@ $this->title = Yii::t('app','home');
                 <div class="uk-width uk-float-left" style="max-width:600px">
                     <div class="uk-grid uk-grid-collapse">
                         <div class="uk-width-medium-1-2">
-                            <div class="daddy5" data-uk-scrollspy="{cls:'uk-animation-scale-up', repeat: true, delay:100}"><a id="dad1" href="#d"></a></div>
+                            <div class="daddy5" data-uk-scrollspy="{cls:'uk-animation-scale-up', repeat: true, delay:100}"><a id="dad6" href="#d"></a></div>
                         </div>
                         <div class="uk-width-medium-1-2 uk-text-left">
                             <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-scale-down', repeat: true, delay:400}"><?=Yii::t('app','aUson')?></h2>
                             <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:100}"><?=Yii::t('app','uson27title')?></h2>
                             <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:300}"><?=Yii::t('app','uson27title')?></p>
 
-                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:500}"><a id="not1" href="#modal-donate" data-uk-modal="{center:true}" class="uk-button uk-button-small uk-button-success uk-border-rounded"><?=Yii::t('app','i_helping')?></a></div>
+                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:500}"><a id="not6" href="#modal-donate" data-uk-modal="{center:true}" class="uk-button uk-button-small uk-button-success uk-border-rounded"><?=Yii::t('app','i_helping')?></a></div>
                         </div>
                     </div>
                 </div>

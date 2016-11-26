@@ -6,5 +6,7 @@ return [
     'urlChild' => 'uploads/child/',
     'urlPeople' => 'uploads/people/',
     'urlConsern' => 'uploads/consern/',
+    'urlSchool' => 'uploads/school/',
+    'urlReports' => 'uploads/reports/',
     'fileUploadUrl' => 'uploads/',
 ];

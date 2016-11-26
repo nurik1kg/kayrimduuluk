@@ -17,5 +17,14 @@
             document.getElementById('not4').addEventListener("mouseover", function(){bg3.style.background = 
             	" rgba(0, 0, 0, 0) url('/style/img/uson/18_H.png') no-repeat scroll 40px 0 / contain";
             	this.addEventListener("mouseout", function(){bg3.style.background = "";});
-            }); 
-   
+            });
+            var bg4 = document.getElementById('dad5');
+            document.getElementById('not5').addEventListener("mouseover", function(){bg4.style.background =
+                " rgba(0, 0, 0, 0) url('/style/img/uson/23_H.png') no-repeat scroll 40px 0 / contain";
+                this.addEventListener("mouseout", function(){bg4.style.background = "";});
+            });
+            var bg5 = document.getElementById('dad6');
+            document.getElementById('not6').addEventListener("mouseover", function(){bg5.style.background =
+                " rgba(0, 0, 0, 0) url('/style/img/uson/27_H.png') no-repeat scroll 40px 0 / contain";
+                this.addEventListener("mouseout", function(){bg5.style.background = "";});
+            });
