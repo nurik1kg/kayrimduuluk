@@ -36,7 +36,7 @@ class News extends \yii\db\ActiveRecord
     {
         return [
             [['text_kg', 'text_ru', 'text_en'], 'string'],
-            [['photo','date'], 'required'],
+            [['photo','date','text_kg', 'text_ru', 'text_en','title_kg', 'title_ru', 'title_en'], 'required'],
             [['title_kg', 'title_ru', 'title_en'], 'string', 'max' => 255],
             [['photo'], 'string', 'max' => 100],
             [['imageFile'], 'image',],
