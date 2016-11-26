@@ -248,7 +248,7 @@ class SiteController extends Controller
                 $query = News::find()->where(['not', ['title_ru'=>null]])->andWhere(['not', ['text_ru' => null]]);
                 break;
             }
-            case 'en-US':{
+            case 'en-EN':{
                 $query = News::find()->where(['not', ['title_en'=>null]])->andWhere(['not', ['text_en' => null]]);
                 break;
             }
@@ -272,7 +272,7 @@ class SiteController extends Controller
     }
 
     public function actionGreat_names(){
-        switch (\Yii::$app->language){
+        switch (Yii::$app->language){
             case 'kg-KG':{
                 $query = People::find()->where(['not', ['name_kg'=>null]])->andWhere(['not', ['content_kg' => null]])->all();
                 $lang =1;
@@ -283,7 +283,7 @@ class SiteController extends Controller
                 $lang =2;
                 break;
             }
-            case 'en-US':{
+            case 'en-EN':{
                 $query = People::find()->where(['not', ['name_en'=>null]])->andWhere(['not', ['content_en' => null]])->all();
                 $lang =3;
                 break;

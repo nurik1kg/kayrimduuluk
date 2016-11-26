@@ -537,7 +537,7 @@ $this->title = Yii::t('app','home');
                             <?php
                         }
                     }
-                    if(Yii::$app->language == 'en-US'){
+                    if(Yii::$app->language == 'en-EN'){
                         if(!empty($new->title_en) && !empty($new->text_en)){
                             if($flag == 3)
                                 break;

@@ -53,7 +53,7 @@ $this->title = Yii::t('app','news');
                     }
                     break;
                 }
-                case 'en-US':{
+                case 'en-EN':{
                     foreach ($news as $new){
                         if(strlen($new->text_en)>= 100)
                             $mini_text = substr($new->text_en,0,100);

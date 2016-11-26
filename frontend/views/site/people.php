@@ -85,7 +85,7 @@ $this->title = Yii::t('app','great_names');
                                 <a href="<?='#modal-blank'.$i?>" data-uk-modal=""><figure class="uk-overlay">
                                         <img  class="uk-overlay-scale uk-border-circle" src="<?='/'.Yii::$app->params['urlPeople'].$people->logo?>" width="600" height="400">
                                         <figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-ignore">
-                                            <h2 class="uk-text-center"><?=$people->name_kg?></h2>
+                                            <h2 class="uk-text-center"><?=$people->name_en?></h2>
                                         </figcaption>
                                     </figure></a>
                                 <div id="<?='modal-blank'.$i?>" class="uk-modal">
@@ -102,10 +102,10 @@ $this->title = Yii::t('app','great_names');
                                             <div class="uk-width-medium-1-2 uk-text-left" style="margin-top: 2%;">
                                                 <ul class="uk-list uk-list-striped">
                                                     <li><h3><?=Yii::t('app','modal_name');?></h3></li>
-                                                    <li><p><?=$people->name_kg?></p></li>
+                                                    <li><p><?=$people->name_en?></p></li>
                                                     <li><h3><?=Yii::t('app','modal_birthday');?></h3></li>
                                                     <li><p><?=$people->birthday?></p></li>
-                                                    <div><?=$people->content_kg?></div>
+                                                    <div><?=$people->content_en?></div>
                                                 </ul>
                                             </div>
                                         </div>

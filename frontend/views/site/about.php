@@ -9,7 +9,7 @@ $this->title = Yii::t('app','about');
 ?>
 <div class="news-page">
     <div class="uk-width uk-container-center" style="max-width: 850px">
-        <div class="uk-text-center"><h1 class="info-title" style="display: inline-block">Фонд тууралуу</h1></div>
+        <div class="uk-text-center"><h1 class="info-title" style="display: inline-block"><?= Yii::t('app','title_info')?></h1></div>
         <div class="uk-panel uk-panel-box uk-margin-top">
             <div class="uk-grid uk-grid-medium">
                 <?php
@@ -23,7 +23,7 @@ $this->title = Yii::t('app','about');
                         echo $model->text_ru;
                         break;
                     }
-                    case 'en-US': {
+                    case 'en-EN': {
                         echo $model->text_en;
                         break;
                     }

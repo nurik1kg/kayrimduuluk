@@ -62,9 +62,18 @@ use yii\helpers\Url;
 <div class="header">
     <nav class="uk-navbar">
         <div class="uk-navbar-nav">
+            <?php
+            use pjhl\multilanguage\assets\ChangeLanguageAsset;
+            ChangeLanguageAsset::register($this);
+            ?>
+            <a href="#" class="multilanguage-set <?=Yii::$app->language=='kg-KG'?'lang lang-kg':'lang'; ?>" data-language="1">KG</a>
+            <a href="#" class="multilanguage-set <?=Yii::$app->language=='ru-RU'?'lang lang-kg':'lang'; ?>" data-language="2">RU</a>
+            <a href="#" class="multilanguage-set <?=Yii::$app->language=='en-EN'?'lang lang-kg':'lang'; ?>" data-language="3">EN</a>
+            <!--
             <a href="<?=Url::toRoute(['site/lang','l'=>1])?>" class="<?=Yii::$app->language=='kg-KG'?'lang lang-kg':'lang'; ?>">KG</a>
             <a href="<?=Url::toRoute(['site/lang','l'=>2])?>" class="<?=Yii::$app->language=='ru-RU'?'lang lang-kg':'lang'; ?>">RU</a>
             <a href="<?=Url::toRoute(['site/lang','l'=>3])?>" class="<?=Yii::$app->language=='en-US'?'lang lang-kg':'lang'; ?>">EN</a>
+            -->
         </div>
 
         <div class="uk-navbar-flip">
