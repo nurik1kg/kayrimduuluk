@@ -10,14 +10,17 @@ $this->title = 'Админ панель ';
             <a href="<?= \yii\helpers\Url::toRoute('news/index');?>"><div class="col-md-3 text-center border" style="margin:26px; padding: 15px;">
                     <img src="/img/news.png" alt="" width="100px;"><h4>Жаңылыктар</h4>
                 </div></a>
-           <!-- <a href="<?= \yii\helpers\Url::toRoute('consern/index');?>"><div class="col-md-3 text-center border" style="margin:26px; padding: 15px;">
-                    <img src="/img/wit.png" alt="" width="100px;"><h4>Камкорчулар</h4>
-                </div></a> -->
             <a href="<?= \yii\helpers\Url::toRoute('people/index');?>"><div class="col-md-3 text-center border" style="margin:26px; padding: 15px;">
                     <img src="/img/bman.png" alt="" width="100px;"><h4>Белгилүү инсандар</h4>
                 </div></a>
             <a href="<?= \yii\helpers\Url::toRoute('sponsor/index');?>"><div class="col-md-3 text-center border" style="margin:26px; padding: 15px;">
                     <img src="/img/part.png" alt="" width="100px;"><h4>Өнөктөштөр</h4>
+                </div></a>
+            <a href="<?= \yii\helpers\Url::toRoute('reports/index');?>"><div class="col-md-5 text-center border" style="margin:26px; padding: 15px;">
+                    <img src="/img/report.png" alt="" width="100px;"><h4>Отчёттор</h4>
+                </div></a>
+            <a href="<?= \yii\helpers\Url::toRoute('schools/index');?>"><div class="col-md-5 text-center border" style="margin:26px; padding: 15px;">
+                    <img src="/img/school.png" alt="" width="100px;"><h4>Мектептер</h4>
                 </div></a>
         </div>
         <div class="row">

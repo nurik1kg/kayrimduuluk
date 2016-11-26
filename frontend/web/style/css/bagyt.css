@@ -392,9 +392,7 @@
 }
 
 .section-donate-block2 {
-  background-color: #3b4561;
-  background-image: -moz-linear-gradient(0px 50% , transparent 90%, #475577 50%);
-  background-size: 10px auto;
+  background: rgba(0, 0, 0, 0) repeating-linear-gradient(to right, #3b4561, #3b4561 10px, #475577 1px, #475577 11px) repeat scroll 0 0;
   height: 400px;
   padding: 40px 0 60px;
   width: 100%;
@@ -465,14 +463,15 @@
   color: #fff;
   height: 100px;
   text-align: center;
+  width: 150px;
 }
 
 .line-chart-text-1 {
   background: #41a85f none repeat scroll 0 0;
   color: #fff;
   height: 100px;
-  margin: 150px 0 0;
   text-align: center;
+  width: 150px;
 }
 
 .line-chart-text > h3 {
@@ -512,16 +511,12 @@
 }
 
 .section-info1 {
-  background-color: #3b4561;
-  background-image: -moz-linear-gradient(0px 50% , transparent 90%, #475577 50%);
-  background-size: 10px auto;
+  background: rgba(0, 0, 0, 0) repeating-linear-gradient(to right, #3b4561, #3b4561 10px, #475577 1px, #475577 11px) repeat scroll 0 0;
   padding: 0 0 40px;
 }
 
 .section-news {
-  background-color: #3b4561;
-  background-image: -moz-linear-gradient(0px 50% , transparent 90%, #475577 50%);
-  background-size: 10px auto;
+  background: rgba(0, 0, 0, 0) repeating-linear-gradient(to right, #3b4561, #3b4561 10px, #475577 1px, #475577 11px) repeat scroll 0 0;
   padding: 40px 0;
 }
 
@@ -569,9 +564,7 @@
 }
 
 .news-page {
-  background-color: #3b4561;
-  background-image: -moz-linear-gradient(0px 50% , transparent 90%, #475577 50%);
-  background-size: 10px auto;
+  background: rgba(0, 0, 0, 0) repeating-linear-gradient(to right, #3b4561, #3b4561 10px, #475577 1px, #475577 11px) repeat scroll 0 0;
   padding: 0 0 25px;
 }
 

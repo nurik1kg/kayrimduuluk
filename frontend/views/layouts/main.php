@@ -23,6 +23,8 @@ use yii\helpers\Url;
     <script src="/style/js/core/smooth-scroll.min.js"></script>
     <script src="/style/js/components/slideshow.min.js"></script>
     <script src="/style/js/components/slider.js"></script>
+    <script src="/style/js/components/accordion.min.js"></script>
+
 </head>
 
 <body>

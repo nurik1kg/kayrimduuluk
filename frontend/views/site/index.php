@@ -407,7 +407,6 @@ $this->title = Yii::t('app','home');
         </div>
     </div>
 </div>
-
 <div class="section-diagram">
     <div class="uk-grid uk-grid-collapse">
         <div class="uk-width-1-2 dbg-fs">
@@ -415,16 +414,25 @@ $this->title = Yii::t('app','home');
                 <div class="uk-width uk-float-right" style="max-width:600px">
                     <div class="uk-grid uk-grid-collapse">
                         <div class="uk-width-medium-1-2 uk-text-right">
-                            <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-left', repeat: true, delay:100}"><strong><?=Yii::t('app','have_sponsor')?></strong></h2>
-                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-left', repeat: true, delay:500}"><?=Yii::t('app','have_sponsor_text')?></p>
+                            <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:100}"><strong><?=Yii::t('app','have_sponsor')?></strong></h2>
+                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:500}"><?=Yii::t('app','have_sponsor_text')?></p>
                         </div>
                         <div class="uk-width-medium-1-2">
-                            <div style="box-sizing: border-box; padding: 0 35px 0 100px;" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true, delay:300}">
-                                <div class="line-chart-text-1">
-                                    <h3><?=$statistic->helped?></h3>
-                                    <p><?=Yii::t('app','childs')?></p>
+                            <div class="uk-vertical-align uk-panel" style="height: 400px;">
+                                <div class="uk-vertical-align-bottom">
+                                    <div style="padding: 0 0 0 100px;" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true, delay:300}">
+                                        <div class="line-chart-text-1">
+                                            <h3><?=$statistic->helped?></h3>
+                                            <p><?=Yii::t('app','childs')?></p>
+                                        </div>
+                                        <div class="line-chart-green" style="
+                                        <?php $all = $statistic->help+$statistic->helped;
+                                        $prosent = ($statistic->helped*100)/$all;
+                                        $aab = $prosent*3;
+                                        echo 'height:'.$aab.'px';
+                                        ?>"></div>
+                                    </div>
                                 </div>
-                                <div class="line-chart-green" style="height: 150px;"></div>
                             </div>
                         </div>
                     </div>
@@ -436,17 +444,28 @@ $this->title = Yii::t('app','home');
                 <div class="uk-width uk-float-left" style="max-width:600px">
                     <div class="uk-grid uk-grid-collapse">
                         <div class="uk-width-medium-1-2">
-                            <div style="box-sizing: border-box; padding: 0 100px 0 35px;" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true, delay:100}">
-                                <div class="line-chart-text">
-                                    <h3><?=$statistic->help?></h3>
-                                    <p><?=Yii::t('app','childs')?></p>
+                            <div class="uk-vertical-align uk-panel" style="height: 400px;">
+                                <div class="uk-vertical-align-bottom">
+                                    <div style="padding: 0 0 0 50px;" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true, delay:300}">
+                                        <div class="line-chart-text">
+                                            <h3><?=$statistic->help?></h3>
+                                            <p><?=Yii::t('app','childs')?></p>
+                                        </div>
+                                        <div class="line-chart" style="
+                                        <?php $all = $statistic->help+$statistic->helped;
+                                        $prosent = ($statistic->help*100)/$all;
+                                        $aab = $prosent*3;
+                                        echo 'height:'.$aab.'px';
+                                        ?>">
+
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="line-chart" style="height: 300px;"></div>
                             </div>
                         </div>
                         <div class="uk-width-medium-1-2 uk-text-left">
-                            <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:100}"><strong><?=Yii::t('app','no_sponsor')?></strong></h2>
-                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:500}"><?=Yii::t('app','no_sponsor_text')?></p>
+                            <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:100}"><strong><?=Yii::t('app','no_sponsor')?></strong></h2>
+                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:500}"><?=Yii::t('app','no_sponsor_text')?></p>
                         </div>
                     </div>
                 </div>
