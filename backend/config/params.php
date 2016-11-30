@@ -9,4 +9,6 @@ return [
     'urlSchool' => 'uploads/school/',
     'urlReports' => 'uploads/reports/',
     'fileUploadUrl' => 'uploads/',
+    'facebook' => 'https://www.facebook.com/',
+    'instagram' => 'https://www.instagram.com/',
 ];

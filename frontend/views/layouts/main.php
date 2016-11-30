@@ -69,16 +69,11 @@ use yii\helpers\Url;
             <a href="#" class="multilanguage-set <?=Yii::$app->language=='kg-KG'?'lang lang-kg':'lang'; ?>" data-language="1">KG</a>
             <a href="#" class="multilanguage-set <?=Yii::$app->language=='ru-RU'?'lang lang-kg':'lang'; ?>" data-language="2">RU</a>
             <a href="#" class="multilanguage-set <?=Yii::$app->language=='en-EN'?'lang lang-kg':'lang'; ?>" data-language="3">EN</a>
-            <!--
-            <a href="<?=Url::toRoute(['site/lang','l'=>1])?>" class="<?=Yii::$app->language=='kg-KG'?'lang lang-kg':'lang'; ?>">KG</a>
-            <a href="<?=Url::toRoute(['site/lang','l'=>2])?>" class="<?=Yii::$app->language=='ru-RU'?'lang lang-kg':'lang'; ?>">RU</a>
-            <a href="<?=Url::toRoute(['site/lang','l'=>3])?>" class="<?=Yii::$app->language=='en-US'?'lang lang-kg':'lang'; ?>">EN</a>
-            -->
         </div>
 
         <div class="uk-navbar-flip">
-            <a href="#" class="uk-icon-button uk-icon-facebook-square"></a>
-            <a href="#" class="uk-icon-button uk-icon-instagram"></a>
+            <a href="<?=Yii::$app->params['facebook']?>" class="uk-icon-button uk-icon-facebook-square"></a>
+            <a href="<?=Yii::$app->params['instagram']?>" class="uk-icon-button uk-icon-instagram"></a>
         </div>
 
         <div class="uk-width uk-container-center uk-text-center uk-hidden-small" style="max-width: 575px">
@@ -121,8 +116,8 @@ use yii\helpers\Url;
             <div class="call uk-margin-remove uk-float-left"><span class="uk-icon-phone-square"><?=' '.Yii::t('app','source_number')?></div>
             <div class="arrow-bottom-animate"><a href="#top" data-uk-smooth-scroll="" class="gototop"><img src="/style/img/gotop.png"></a></div>
             <div class="uk-float-right">
-                <a href="#" class="uk-icon-button uk-icon-facebook-square"></a>
-                <a href="#" class="uk-icon-button uk-icon-instagram"></a>
+                <a href="<?=Yii::$app->params['facebook']?>" class="uk-icon-button uk-icon-facebook-square"></a>
+                <a href="<?=Yii::$app->params['instagram']?>" class="uk-icon-button uk-icon-instagram"></a>
             </div>
         </div>
     </div>
@@ -141,11 +136,11 @@ use yii\helpers\Url;
             type: "GET",
             data: {'name':nameAnket,'phone':phoneAnket,'email':emailAnket},
             success: function(data){
-                console.log(data);
+//                console.log(data);
                 alert(data);
             },
             error: function (data) {
-                console.log(data);
+//                console.log(data);
                 alert('Filed! '+data);
             }
         });
@@ -159,11 +154,11 @@ use yii\helpers\Url;
             type: "GET",
             data: {'name':nameAnket,'phone':phoneAnket,'email':emailAnket},
             success: function(data){
-                console.log(data);
+//                console.log(data);
                 alert(data);
             },
             error: function (data) {
-                console.log(data);
+//                console.log(data);
                 alert('Filed! '+data);
             }
         });
