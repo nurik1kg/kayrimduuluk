@@ -24,10 +24,11 @@ class PeopleController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
+                'only' => ['index','create','update','view','delete'],
                 'rules' => [
                     [
-                        'only' => ['index','create','update','view','delete'],
                         'allow' => true,
+                        'actions' => ['index','create','update','view','delete'],
                         'roles' => ['@'],
                     ],
                 ],
