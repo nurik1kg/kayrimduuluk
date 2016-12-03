@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Url;
-
+use pjhl\multilanguage\assets\ChangeLanguageAsset;
+ChangeLanguageAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -62,10 +63,6 @@ use yii\helpers\Url;
 <div class="header">
     <nav class="uk-navbar">
         <div class="uk-navbar-nav">
-            <?php
-            use pjhl\multilanguage\assets\ChangeLanguageAsset;
-            ChangeLanguageAsset::register($this);
-            ?>
             <a href="#" class="multilanguage-set <?=Yii::$app->language=='kg-KG'?'lang lang-kg':'lang'; ?>" data-language="1">KG</a>
             <a href="#" class="multilanguage-set <?=Yii::$app->language=='ru-RU'?'lang lang-kg':'lang'; ?>" data-language="2">RU</a>
             <a href="#" class="multilanguage-set <?=Yii::$app->language=='en-EN'?'lang lang-kg':'lang'; ?>" data-language="3">EN</a>
