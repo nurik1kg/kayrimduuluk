@@ -90,9 +90,9 @@ $this->title = Yii::t('app','home');
                 <div class="uk-width uk-float-right" style="max-width:600px">
                     <div class="uk-grid uk-grid-collapse">
                         <div class="uk-width-medium-1-2 uk-text-right">
-                            <h2 class="person-title" data-uk-scrollspy="{cls:'uk-animation-scale-down', repeat: true, delay:100}"><?=Yii::t('app','thisAsan')?></h2>
-                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-left', repeat: true, delay:100}"><?=Yii::t('app','asan7min_tit')?></h2>
-                            <p data-uk-scrollspy="{cls:'uk-animation-slide-left', repeat: true, delay:400}"><?=Yii::t('app','asan7text')?></p>
+                            <h2 class="person-title" data-uk-scrollspy="{cls:'uk-animation-slide-top', repeat: true, delay:100}"><?=Yii::t('app','thisAsan')?></h2>
+                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:100}"><?=Yii::t('app','asan7min_tit')?></h2>
+                            <p data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:400}"><?=Yii::t('app','asan7text')?></p>
                         </div>
                         <div class="uk-width-medium-1-2">
                             <img src="/style/img/asan/asan.png" class="person" data-uk-scrollspy="{cls:'uk-animation-scale-up', repeat: true}">
@@ -109,9 +109,9 @@ $this->title = Yii::t('app','home');
                             <div class="uk-text-right"><img src="/style/img/uson/Yson.png" class="person" data-uk-scrollspy="{cls:'uk-animation-scale-up', repeat: true, delay:400}"></div>
                         </div>
                         <div class="uk-width-medium-1-2 uk-text-left">
-                            <h2 class="person-title" data-uk-scrollspy="{cls:'uk-animation-scale-down', repeat: true, delay:100}"><?=Yii::t('app','thisUson')?></h2>
-                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:100}"><?=Yii::t('app','uson7min_tit')?></h2>
-                            <p data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:400}"><?=Yii::t('app','uson7text')?> </p>
+                            <h2 class="person-title" data-uk-scrollspy="{cls:'uk-animation-slide-top', repeat: true, delay:100}"><?=Yii::t('app','thisUson')?></h2>
+                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:100}"><?=Yii::t('app','uson7min_tit')?></h2>
+                            <p data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:400}"><?=Yii::t('app','uson7text')?> </p>
                         </div>
                     </div>
                 </div>
@@ -131,9 +131,9 @@ $this->title = Yii::t('app','home');
                 <div class="uk-width uk-float-right" style="max-width:600px">
                     <div class="uk-grid uk-grid-collapse">
                         <div class="uk-width-medium-1-2 uk-text-right">
-                            <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-scale-down', repeat: true, delay:100}"><?=Yii::t('app','aAsan')?></h2>
-                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-left', repeat: true, delay:100}"><?=Yii::t('app','asan9title')?></h2>
-                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-left', repeat: true, delay:100}"><?=Yii::t('app','asan9text')?> </p>
+                            <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-top', repeat: true, delay:100}"><?=Yii::t('app','aAsan')?></h2>
+                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:100}"><?=Yii::t('app','asan9title')?></h2>
+                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:100}"><?=Yii::t('app','asan9text')?> </p>
                         </div>
                         <div class="uk-width-medium-1-2">
                             <img src="/style/img/asan/asan9.png" class="person" data-uk-scrollspy="{cls:'uk-animation-scale-up', repeat: true, delay:100}">
@@ -150,11 +150,11 @@ $this->title = Yii::t('app','home');
                             <div class="daddy" data-uk-scrollspy="{cls:'uk-animation-scale-up', repeat: true, delay:100}"><a id="dad" href="#d"></a></div>
                         </div>
                         <div class="uk-width-medium-1-2 uk-text-left">
-                            <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-scale-down', repeat: true, delay:100}"><?=Yii::t('app','aUson')?></h2>
-                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:100}"><?=Yii::t('app','uson9title')?></h2>
-                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:100}"><?=Yii::t('app','uson9text')?></p>
+                            <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-top', repeat: true, delay:100}"><?=Yii::t('app','aUson')?></h2>
+                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:100}"><?=Yii::t('app','uson9title')?></h2>
+                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:100}"><?=Yii::t('app','uson9text')?></p>
 
-                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:500}"><a id="not" href="#modal-donate" data-uk-modal="{center:true}" class="uk-button uk-button-small uk-button-success uk-border-rounded"><?=Yii::t('app','i_helping')?></a></div>
+                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:500}"><a id="not" href="#modal-donate" data-uk-modal="{center:true}" class="uk-button uk-button-small uk-button-success uk-border-rounded"><?=Yii::t('app','i_helping')?></a></div>
                         </div>
                     </div>
                 </div>
@@ -174,9 +174,9 @@ $this->title = Yii::t('app','home');
                 <div class="uk-width uk-float-right" style="max-width:600px">
                     <div class="uk-grid uk-grid-collapse">
                         <div class="uk-width-medium-1-2 uk-text-right">
-                            <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-scale-down', repeat: true, delay:100}"><?=Yii::t('app','aAsan')?></h2>
-                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-left', repeat: true, delay:100}"><?=Yii::t('app','asan11title')?></h2>
-                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-left', repeat: true, delay:100}"><?=Yii::t('app','asan11text')?></p>
+                            <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-top', repeat: true, delay:100}"><?=Yii::t('app','aAsan')?></h2>
+                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:100}"><?=Yii::t('app','asan11title')?></h2>
+                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:100}"><?=Yii::t('app','asan11text')?></p>
                         </div>
                         <div class="uk-width-medium-1-2">
                             <img src="/style/img/asan/asan11.png" class="person" data-uk-scrollspy="{cls:'uk-animation-scale-up', repeat: true, delay:100}">
@@ -193,11 +193,11 @@ $this->title = Yii::t('app','home');
                             <div class="daddy1" data-uk-scrollspy="{cls:'uk-animation-scale-up', repeat: true, delay:400}"><a id="dad2" href="#d"></a></div>
                         </div>
                         <div class="uk-width-medium-1-2 uk-text-left">
-                            <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-scale-down', repeat: true, delay:100}"><?=Yii::t('app','aUson')?></h2>
-                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:100}"><?=Yii::t('app','uson11title')?></h2>
-                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:100}"><?=Yii::t('app','uson11text')?></p>
+                            <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-top', repeat: true, delay:100}"><?=Yii::t('app','aUson')?></h2>
+                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:100}"><?=Yii::t('app','uson11title')?></h2>
+                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:100}"><?=Yii::t('app','uson11text')?></p>
 
-                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:500}"><a id="not2" href="#modal-donate" data-uk-modal="{center:true}" class="uk-button uk-button-small uk-button-success uk-border-rounded"><?=Yii::t('app','i_helping')?></a></div>
+                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:500}"><a id="not2" href="#modal-donate" data-uk-modal="{center:true}" class="uk-button uk-button-small uk-button-success uk-border-rounded"><?=Yii::t('app','i_helping')?></a></div>
                         </div>
                     </div>
                 </div>
@@ -217,9 +217,9 @@ $this->title = Yii::t('app','home');
                 <div class="uk-width uk-float-right" style="max-width:600px">
                     <div class="uk-grid uk-grid-collapse">
                         <div class="uk-width-medium-1-2 uk-text-right">
-                            <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-scale-down', repeat: true, delay:100}"><?=Yii::t('app','aAsan')?></h2>
-                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-left', repeat: true, delay:100}"><?=Yii::t('app','asan15title')?></h2>
-                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-left', repeat: true, delay:100}"><?=Yii::t('app','asan15text')?></p>
+                            <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-top', repeat: true, delay:100}"><?=Yii::t('app','aAsan')?></h2>
+                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:100}"><?=Yii::t('app','asan15title')?></h2>
+                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:100}"><?=Yii::t('app','asan15text')?></p>
                         </div>
                         <div class="uk-width-medium-1-2">
                             <img src="/style/img/asan/asan15.png" class="person" data-uk-scrollspy="{cls:'uk-animation-scale-up', repeat: true, delay:100}">
@@ -236,11 +236,11 @@ $this->title = Yii::t('app','home');
                             <div class="daddy2" data-uk-scrollspy="{cls:'uk-animation-scale-up', repeat: true, delay:400}"><a id="dad3" href="#d"></a></div>
                         </div>
                         <div class="uk-width-medium-1-2 uk-text-left">
-                            <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-scale-down', repeat: true, delay:100}"><?=Yii::t('app','aUson')?></h2>
-                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:100}"><?=Yii::t('app','uson15title')?></h2>
-                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:300}"><?=Yii::t('app','uson15text')?></p>
+                            <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-top', repeat: true, delay:100}"><?=Yii::t('app','aUson')?></h2>
+                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:100}"><?=Yii::t('app','uson15title')?></h2>
+                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:300}"><?=Yii::t('app','uson15text')?></p>
 
-                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:500}"><a id="not3" href="#modal-donate" data-uk-modal="{center:true}" class="uk-button uk-button-small uk-button-success uk-border-rounded"><?=Yii::t('app','i_helping')?></a></div>
+                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:500}"><a id="not3" href="#modal-donate" data-uk-modal="{center:true}" class="uk-button uk-button-small uk-button-success uk-border-rounded"><?=Yii::t('app','i_helping')?></a></div>
                         </div>
                     </div>
                 </div>
@@ -261,9 +261,9 @@ $this->title = Yii::t('app','home');
                 <div class="uk-width uk-float-right" style="max-width:600px">
                     <div class="uk-grid uk-grid-collapse">
                         <div class="uk-width-medium-1-2 uk-text-right">
-                            <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-scale-down', repeat: true, delay:100}"><?=Yii::t('app','aAsan')?></h2>
-                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-left', repeat: true, delay:100}"><?=Yii::t('app','asan18title')?></h2>
-                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-left', repeat: true, delay:100}"> <?=Yii::t('app','asan18text')?></p>
+                            <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-top', repeat: true, delay:100}"><?=Yii::t('app','aAsan')?></h2>
+                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:100}"><?=Yii::t('app','asan18title')?></h2>
+                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:100}"> <?=Yii::t('app','asan18text')?></p>
                         </div>
                         <div class="uk-width-medium-1-2">
                             <img src="/style/img/asan/asan18.png" class="person" data-uk-scrollspy="{cls:'uk-animation-scale-up', repeat: true, delay:100}">
@@ -280,11 +280,11 @@ $this->title = Yii::t('app','home');
                             <div class="daddy3" data-uk-scrollspy="{cls:'uk-animation-scale-up', repeat: true, delay:400}"><a id="dad4" href="#d"></a></div>
                         </div>
                         <div class="uk-width-medium-1-2 uk-text-left">
-                            <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-scale-down', repeat: true, delay:100}"><?=Yii::t('app','aUson')?></h2>
-                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:100}"><?=Yii::t('app','uson18title')?></h2>
-                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:300}"><?=Yii::t('app','uson18text')?></p>
+                            <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-top', repeat: true, delay:100}"><?=Yii::t('app','aUson')?></h2>
+                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:100}"><?=Yii::t('app','uson18title')?></h2>
+                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:300}"><?=Yii::t('app','uson18text')?></p>
 
-                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:500}"><a id="not4" href="#modal-donate" data-uk-modal="{center:true}" class="uk-button uk-button-small uk-button-success uk-border-rounded"><?=Yii::t('app','i_helping')?></a></div>
+                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:500}"><a id="not4" href="#modal-donate" data-uk-modal="{center:true}" class="uk-button uk-button-small uk-button-success uk-border-rounded"><?=Yii::t('app','i_helping')?></a></div>
                         </div>
                     </div>
                 </div>
@@ -323,10 +323,10 @@ $this->title = Yii::t('app','home');
                             <div class="daddy4" data-uk-scrollspy="{cls:'uk-animation-scale-up', repeat: true, delay:100}"><a id="dad5" href="#d"></a></div>
                         </div>
                         <div class="uk-width-medium-1-2 uk-text-left">
-                            <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-scale-down', repeat: true, delay:400}"><?=Yii::t('app','aUson')?></h2>
-                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:100}"><?=Yii::t('app','uson23title')?></h2>
-                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:300}"><?=Yii::t('app','uson23text')?></p>
-                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:500}"><a id="not5" href="#modal-donate" data-uk-modal="{center:true}" class="uk-button uk-button-small uk-button-success uk-border-rounded"><?=Yii::t('app','i_helping')?></a></div>
+                            <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-top', repeat: true, delay:400}"><?=Yii::t('app','aUson')?></h2>
+                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:100}"><?=Yii::t('app','uson23title')?></h2>
+                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:300}"><?=Yii::t('app','uson23text')?></p>
+                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:500}"><a id="not5" href="#modal-donate" data-uk-modal="{center:true}" class="uk-button uk-button-small uk-button-success uk-border-rounded"><?=Yii::t('app','i_helping')?></a></div>
                         </div>
                     </div>
                 </div>
@@ -347,9 +347,9 @@ $this->title = Yii::t('app','home');
                 <div class="uk-width uk-float-right" style="max-width:600px">
                     <div class="uk-grid uk-grid-collapse">
                         <div class="uk-width-medium-1-2 uk-text-right">
-                            <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-scale-down', repeat: true, delay:100}"><?=Yii::t('app','aAsan')?></h2>
-                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-left', repeat: true, delay:100}"><?=Yii::t('app','asan27title')?></h2>
-                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-left', repeat: true, delay:100}"><?=Yii::t('app','asan27text')?></p>
+                            <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-top', repeat: true, delay:100}"><?=Yii::t('app','aAsan')?></h2>
+                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:100}"><?=Yii::t('app','asan27title')?></h2>
+                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:100}"><?=Yii::t('app','asan27text')?></p>
                         </div>
                         <div class="uk-width-medium-1-2">
                             <img src="/style/img/asan/asan27.png" class="person" data-uk-scrollspy="{cls:'uk-animation-scale-up', repeat: true, delay:100}">
@@ -366,11 +366,11 @@ $this->title = Yii::t('app','home');
                             <div class="daddy5" data-uk-scrollspy="{cls:'uk-animation-scale-up', repeat: true, delay:100}"><a id="dad6" href="#d"></a></div>
                         </div>
                         <div class="uk-width-medium-1-2 uk-text-left">
-                            <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-scale-down', repeat: true, delay:400}"><?=Yii::t('app','aUson')?></h2>
-                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:100}"><?=Yii::t('app','uson27title')?></h2>
-                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:300}"><?=Yii::t('app','uson27title')?></p>
+                            <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-top', repeat: true, delay:400}"><?=Yii::t('app','aUson')?></h2>
+                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:100}"><?=Yii::t('app','uson27title')?></h2>
+                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:300}"><?=Yii::t('app','uson27title')?></p>
 
-                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay:500}"><a id="not6" href="#modal-donate" data-uk-modal="{center:true}" class="uk-button uk-button-small uk-button-success uk-border-rounded"><?=Yii::t('app','i_helping')?></a></div>
+                            <div class="notsun" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:500}"><a id="not6" href="#modal-donate" data-uk-modal="{center:true}" class="uk-button uk-button-small uk-button-success uk-border-rounded"><?=Yii::t('app','i_helping')?></a></div>
                         </div>
                     </div>
                 </div>
