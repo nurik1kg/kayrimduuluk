@@ -6,14 +6,14 @@ use yii\grid\GridView;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Infos');
+$this->title = 'Фонд тууралуу';
 //$this->params['breadcrumbs'][] = $this->title;
 $model = \app\models\Info::findOne(1);
 ?>
 <div class="row">
     <div class="container">
         <div class="col-lg-10"></div>
-        <div class="col-lg-2"><?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?></div>
+        <div class="col-lg-2"><?= Html::a('Өзгөртүү', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?></div>
         <div class="col-lg-12" style="margin-top: 20px">
             <h2><b>Кыгызча</b></h2>
             <?=$model->text_kg?>

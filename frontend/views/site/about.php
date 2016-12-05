@@ -107,7 +107,7 @@ $this->title = Yii::t('app','about');
 
             <div class="uk-grid uk-grid-small uk-grid-width-medium-1-3" data-uk-grid-margin>
                 <?php
-                $images = \app\models\Galery::find()->where(['childid'=>$report->id])->all();
+                $images = \app\models\Galery::find()->where(['reportsid'=>$report->id])->all();
                 foreach ($images as $image) :
                 ?>
                 <div>
