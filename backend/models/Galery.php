@@ -27,10 +27,9 @@ class Galery extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['photo', 'childid'], 'required'],
+            [['photo',], 'required'],
             [['childid'], 'integer'],
             [['photo'], 'string', 'max' => 256],
-            [['childid'], 'exist', 'skipOnError' => true, 'targetClass' => News::className(), 'targetAttribute' => ['childid' => 'id']],
         ];
     }
 

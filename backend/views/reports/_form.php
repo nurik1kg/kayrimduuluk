@@ -75,7 +75,7 @@ use yii\widgets\ActiveForm;
     <?php ActiveForm::end(); ?>
 
     <?php
-    $query = Galery::find()->where(['childid' => $model->id]);
+    $query = Galery::find()->where(['reportsid' => $model->id]);
     if(!$model->isNewRecord && $query->count()>0) {
 
         $dataProvider = new ActiveDataProvider([

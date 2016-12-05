@@ -103,7 +103,7 @@ class ReportsController extends Controller
                     $image->saveAs($fileDir . $filename);
                     $save = new Galery();
                     $save->photo = $filename;
-                    $save->childid = $model->id;
+                    $save->reportsid = $model->id;
                     $save->save();
                 }
             }
@@ -129,7 +129,7 @@ class ReportsController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-        $photos = Galery::find()->where(['childid'=>$id])->all();
+        $photos = Galery::find()->where(['reportsid'=>$id])->all();
 
         if ($model->load(Yii::$app->request->post())) {
             $images = UploadedFile::getInstances($model, 'imageFiles');
@@ -154,7 +154,7 @@ class ReportsController extends Controller
                     $image->saveAs($fileDir . $filename);
                     $save = new Galery();
                     $save->photo = $filename;
-                    $save->childid = $model->id;
+                    $save->reportsid = $model->id;
                     $save->save();
                 }
             }
@@ -208,7 +208,7 @@ class ReportsController extends Controller
 
     public function actionPhotodelete($id){
         $delete = Galery::findOne($id);
-        $model = $this->findModel($delete->childid);
+        $model = $this->findModel($delete->reportsid);
         $delete->delete();
         return Yii::$app->response->redirect(Url::to(['update', 'id' => $model->id]));
     }
