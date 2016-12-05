@@ -80,21 +80,21 @@ ChangeLanguageAsset::register($this);
                 <?php }else{ ?>
                 <li><a href="<?=Url::toRoute('site/index')?>"><span class="uk-icon-home"></span></a></li>
                 <?php } if (Yii::t('app','sponsors')==$this->title){?>
-                <li class="uk-active"><a href="<?=Url::toRoute('site/sponsors')?>">Демөөрчүлөр</a></li>
+                <li class="uk-active"><a href="<?=Url::toRoute('site/sponsors')?>"><?=Yii::t('app','page_sponsors')?></a></li>
                 <?php }else{ ?>
-                <li><a href="<?=Url::toRoute('site/sponsors')?>">Демөөрчүлөр</a></li>
+                <li><a href="<?=Url::toRoute('site/sponsors')?>"><?=Yii::t('app','page_sponsors')?></a></li>
                 <?php } if (Yii::t('app','news')==$this->title){?>
-                <li class="uk-active"><a href="<?=Url::toRoute('site/news')?>">Жаңылыктар</a></li>
+                <li class="uk-active"><a href="<?=Url::toRoute('site/news')?>"><?=Yii::t('app','page_news')?></a></li>
                 <?php }else{ ?>
-                <li><a href="<?=Url::toRoute('site/news')?>">Жаңылыктар</a></li>
+                <li><a href="<?=Url::toRoute('site/news')?>"><?=Yii::t('app','page_news')?></a></li>
                 <?php } if (Yii::t('app','about')==$this->title){?>
-                <li class="uk-active"><a href="<?=Url::toRoute('site/about')?>">Фонд тууралуу</a></li>
+                <li class="uk-active"><a href="<?=Url::toRoute('site/about')?>"><?=Yii::t('app','page_about')?></a></li>
                 <?php }else{ ?>
-                <li><a href="<?=Url::toRoute('site/about')?>">Фонд тууралуу</a></li>
+                <li><a href="<?=Url::toRoute('site/about')?>"><?=Yii::t('app','page_about')?></a></li>
                 <?php } if (Yii::t('app','great_names')==$this->title){?>
-                <li class="uk-active"><a href="<?=Url::toRoute('site/great_names')?>">Белгилүү инсандар</a></li>
+                <li class="uk-active"><a href="<?=Url::toRoute('site/great_names')?>"><?=Yii::t('app','page_people')?></a></li>
                 <?php }else{ ?>
-                <li><a href="<?=Url::toRoute('site/great_names')?>">Белгилүү инсандар</a></li>
+                <li><a href="<?=Url::toRoute('site/great_names')?>"><?=Yii::t('app','page_people')?></a></li>
                 <?php } ?>
             </ul>
         </div>
