@@ -4,7 +4,7 @@ return [
     'language' => 'kg-KG',
 
     // set source language to be Russian
-    'sourceLanguage' => 'ru-RU',
+//    'sourceLanguage' => 'ru-RU',
 
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
