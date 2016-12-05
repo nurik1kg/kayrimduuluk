@@ -327,7 +327,17 @@ class SiteController extends Controller
             }
         }
     }
-    public function actionMessagesend(){
-        return $this->render('succ');
+    public function actionFeedback(){
+        if($_POST && $_POST['aName'] && $_POST['aPhone'] && $_POST['aEmail']){
+            Yii::$app->mail
+                ->compose()
+                ->setFrom($_POST['aEmail'])
+                ->setTo('nurik1kg@mail.ru')
+                ->setSubject('Жардам бергим келет!')
+                ->setTextBody("Аты жөнү: ".$_POST['aName']."     "."Телефон номери: ".$_POST['aPhone']."       "."email : ".$_POST['aEmail'])
+                ->send();
+            return "Success";
+        }
+        return $this->redirect('index');
     }
 }

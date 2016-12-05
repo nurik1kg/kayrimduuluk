@@ -102,13 +102,13 @@ class PeopleController extends Controller
                 }
                 $photo->saveAs($fileDir . $filename);
                 chmod($fileDir . $filename, 0777);
-                Image::thumbnail($fileDir . $filename, 120, 120)
-                    ->save(Yii::getAlias($fileDir . "thumb_" . $filename), ['quality' => 80]);
-                chmod($fileDir . "thumb_" . $filename, 0777);
-                $utility = new UtilityComponent();
-                $sizes = $utility->imageSizeRatio($fileDir . $filename, 500, 500);
-                Image::getImagine()->open($fileDir . $filename)->thumbnail(new Box($sizes['width'], $sizes['height']))->save($fileDir . "mobile_" . $filename, ['quality' => 90]);
-                chmod($fileDir . "mobile_" . $filename, 0777);
+//                Image::thumbnail($fileDir . $filename, 120, 120)
+//                    ->save(Yii::getAlias($fileDir . "thumb_" . $filename), ['quality' => 80]);
+//                chmod($fileDir . "thumb_" . $filename, 0777);
+//                $utility = new UtilityComponent();
+//                $sizes = $utility->imageSizeRatio($fileDir . $filename, 500, 500);
+//                Image::getImagine()->open($fileDir . $filename)->thumbnail(new Box($sizes['width'], $sizes['height']))->save($fileDir . "mobile_" . $filename, ['quality' => 90]);
+//                chmod($fileDir . "mobile_" . $filename, 0777);
                 $model->logo = $filename;
                 $model->save();
 //                return $this->redirect(['view', 'id' => $model->id]);
@@ -135,13 +135,13 @@ class PeopleController extends Controller
                 }
                 $photo2->saveAs($fileDir . $filename);
                 chmod($fileDir . $filename, 0777);
-                Image::thumbnail($fileDir . $filename, 120, 120)
-                    ->save(Yii::getAlias($fileDir . "thumb_" . $filename), ['quality' => 80]);
-                chmod($fileDir . "thumb_" . $filename, 0777);
-                $utility = new UtilityComponent();
-                $sizes = $utility->imageSizeRatio($fileDir . $filename, 500, 500);
-                Image::getImagine()->open($fileDir . $filename)->thumbnail(new Box($sizes['width'], $sizes['height']))->save($fileDir . "mobile_" . $filename, ['quality' => 90]);
-                chmod($fileDir . "mobile_" . $filename, 0777);
+//                Image::thumbnail($fileDir . $filename, 120, 120)
+//                    ->save(Yii::getAlias($fileDir . "thumb_" . $filename), ['quality' => 80]);
+//                chmod($fileDir . "thumb_" . $filename, 0777);
+//                $utility = new UtilityComponent();
+//                $sizes = $utility->imageSizeRatio($fileDir . $filename, 500, 500);
+//                Image::getImagine()->open($fileDir . $filename)->thumbnail(new Box($sizes['width'], $sizes['height']))->save($fileDir . "mobile_" . $filename, ['quality' => 90]);
+//                chmod($fileDir . "mobile_" . $filename, 0777);
                 $model->image = $filename;
                 $model->save();
 //                return $this->redirect(['view', 'id' => $model->id]);
@@ -191,13 +191,13 @@ class PeopleController extends Controller
                 }
                 $photo->saveAs($fileDir . $filename);
                 chmod($fileDir . $filename, 0777);
-                Image::thumbnail($fileDir . $filename, 120, 120)
-                    ->save(Yii::getAlias($fileDir . "thumb_" . $filename), ['quality' => 80]);
-                chmod($fileDir . "thumb_" . $filename, 0777);
-                $utility = new UtilityComponent();
-                $sizes = $utility->imageSizeRatio($fileDir . $filename, 500, 500);
-                Image::getImagine()->open($fileDir . $filename)->thumbnail(new Box($sizes['width'], $sizes['height']))->save($fileDir . "mobile_" . $filename, ['quality' => 90]);
-                chmod($fileDir . "mobile_" . $filename, 0777);
+//                Image::thumbnail($fileDir . $filename, 120, 120)
+//                    ->save(Yii::getAlias($fileDir . "thumb_" . $filename), ['quality' => 80]);
+//                chmod($fileDir . "thumb_" . $filename, 0777);
+//                $utility = new UtilityComponent();
+//                $sizes = $utility->imageSizeRatio($fileDir . $filename, 500, 500);
+//                Image::getImagine()->open($fileDir . $filename)->thumbnail(new Box($sizes['width'], $sizes['height']))->save($fileDir . "mobile_" . $filename, ['quality' => 90]);
+//                chmod($fileDir . "mobile_" . $filename, 0777);
                 $model->logo = $filename;
                 $model->save();
 //                return $this->redirect(['view', 'id' => $model->id]);
@@ -221,13 +221,13 @@ class PeopleController extends Controller
                 }
                 $photo2->saveAs($fileDir . $filename);
                 chmod($fileDir . $filename, 0777);
-                Image::thumbnail($fileDir . $filename, 120, 120)
-                    ->save(Yii::getAlias($fileDir . "thumb_" . $filename), ['quality' => 80]);
-                chmod($fileDir . "thumb_" . $filename, 0777);
-                $utility = new UtilityComponent();
-                $sizes = $utility->imageSizeRatio($fileDir . $filename, 500, 500);
-                Image::getImagine()->open($fileDir . $filename)->thumbnail(new Box($sizes['width'], $sizes['height']))->save($fileDir . "mobile_" . $filename, ['quality' => 90]);
-                chmod($fileDir . "mobile_" . $filename, 0777);
+//                Image::thumbnail($fileDir . $filename, 120, 120)
+//                    ->save(Yii::getAlias($fileDir . "thumb_" . $filename), ['quality' => 80]);
+//                chmod($fileDir . "thumb_" . $filename, 0777);
+//                $utility = new UtilityComponent();
+//                $sizes = $utility->imageSizeRatio($fileDir . $filename, 500, 500);
+//                Image::getImagine()->open($fileDir . $filename)->thumbnail(new Box($sizes['width'], $sizes['height']))->save($fileDir . "mobile_" . $filename, ['quality' => 90]);
+//                chmod($fileDir . "mobile_" . $filename, 0777);
                 $model->image = $filename;
                 $model->save();
 //                return $this->redirect(['view', 'id' => $model->id]);

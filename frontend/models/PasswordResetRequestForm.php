@@ -8,10 +8,11 @@ use common\models\User;
 /**
  * Password reset request form
  */
+Yii::$app->name = "Kutbagyt.org";
+
 class PasswordResetRequestForm extends Model
 {
     public $email;
-
 
     /**
      * @inheritdoc
@@ -55,7 +56,7 @@ class PasswordResetRequestForm extends Model
         }
 
         return Yii::$app
-            ->mailer
+            ->mail
             ->compose(
                 ['html' => 'passwordResetToken-html', 'text' => 'passwordResetToken-text'],
                 ['user' => $user]
