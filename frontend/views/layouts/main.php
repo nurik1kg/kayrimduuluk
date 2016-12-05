@@ -50,9 +50,9 @@ ChangeLanguageAsset::register($this);
                         <?php $form = ActiveForm::begin(['action'=> ['/site/feedback'],'options'=>['class'=>'uk-form']]); ?>
                             <fieldset data-uk-margin>
                                 <legend><?=Yii::t('app','help_anket')?></legend>
-                                <p><input type="text" placeholder="<?=Yii::t('app','anket_names')?>" class="uk-width-1-1" id="aName" required></p>
-                                <p><input type="text" placeholder="<?=Yii::t('app','anket_phone')?>" class="uk-width-1-1" id="aPhone" required></p>
-                                <p><input type="email" placeholder="<?=Yii::t('app','anket_email')?>" class="uk-width-1-1" id="aEmail" required></p>
+                                <p><input type="text" placeholder="<?=Yii::t('app','anket_names')?>" class="uk-width-1-1" name="aName" required></p>
+                                <p><input type="text" placeholder="<?=Yii::t('app','anket_phone')?>" class="uk-width-1-1" name="aPhone" required></p>
+                                <p><input type="email" placeholder="<?=Yii::t('app','anket_email')?>" class="uk-width-1-1" name="aEmail" required></p>
                                 <button class="uk-button uk-button-primary uk-border-rounded uk-width-1-1"><?=Yii::t('app','anket_send')?></button>
                             </fieldset>
                         <?php ActiveForm::end(); ?>
