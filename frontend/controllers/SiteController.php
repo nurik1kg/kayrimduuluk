@@ -158,11 +158,13 @@ class SiteController extends Controller
         ]);
     }
 
+
     /**
      * Signs user up.
      *
      * @return mixed
      */
+    /*
     public function actionSignup()
     {
         $model = new SignupForm();
@@ -178,7 +180,7 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
-
+    */
     /**
      * Requests password reset.
      *
