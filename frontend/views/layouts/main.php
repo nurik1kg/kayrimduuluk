@@ -1,6 +1,8 @@
 <?php
 use yii\helpers\Url;
 use pjhl\multilanguage\assets\ChangeLanguageAsset;
+use yii\widgets\ActiveForm;
+
 ChangeLanguageAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -45,14 +47,15 @@ ChangeLanguageAsset::register($this);
                 <div id="modal-donate" class="uk-modal modaldonate">
                     <div class="uk-modal-dialog uk-border-rounded" style="max-width: 350px;">
                         <button class="uk-modal-close uk-close" type="button"></button>
-                        <form class="uk-form" onsubmit="return Help_to()">
+                        <?php $form = ActiveForm::begin(['action'=> ['/site/feedback'],'options'=>['class'=>'uk-form']]); ?>
                             <fieldset data-uk-margin>
                                 <legend><?=Yii::t('app','help_anket')?></legend>
                                 <p><input type="text" placeholder="<?=Yii::t('app','anket_names')?>" class="uk-width-1-1" id="aName" required></p>
                                 <p><input type="text" placeholder="<?=Yii::t('app','anket_phone')?>" class="uk-width-1-1" id="aPhone" required></p>
                                 <p><input type="email" placeholder="<?=Yii::t('app','anket_email')?>" class="uk-width-1-1" id="aEmail" required></p>
                                 <button class="uk-button uk-button-primary uk-border-rounded uk-width-1-1"><?=Yii::t('app','anket_send')?></button>
-                        </form>
+                            </fieldset>
+                        <?php ActiveForm::end(); ?>
                     </div>
                 </div>
             </div>

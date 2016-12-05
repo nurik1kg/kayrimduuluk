@@ -3,11 +3,14 @@
 namespace backend\controllers;
 
 use app\models\Galery;
+use common\components\UtilityComponent;
+use Imagine\Image\Box;
 use Yii;
 use app\models\News;
 use yii\data\ActiveDataProvider;
 use yii\filters\AccessControl;
 use yii\helpers\Url;
+use yii\imagine\Image;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -108,7 +111,18 @@ class NewsController extends Controller
                     @chmod('uploads', 0777);
                     @chmod($fileDir, 0777);
                 }
+                //
                 $photo->saveAs($fileDir . $filename);
+                chmod($fileDir . $filename, 0777);
+                Image::thumbnail($fileDir . $filename, 120, 120)
+                    ->save(Yii::getAlias($fileDir . "thumb_" . $filename), ['quality' => 80]);
+                chmod($fileDir . "thumb_" . $filename, 0777);
+                $utility = new UtilityComponent();
+                $sizes = $utility->imageSizeRatio($fileDir . $filename, 500, 500);
+                Image::getImagine()->open($fileDir . $filename)->thumbnail(new Box($sizes['width'], $sizes['height']))->save($fileDir . "mobile_" . $filename, ['quality' => 90]);
+                chmod($fileDir . "mobile_" . $filename, 0777);
+                //
+//                $photo->saveAs($fileDir . $filename);
                 $model->photo = $filename;
                 $model->save();
 //                return $this->redirect(['view', 'id' => $model->id]);
@@ -186,6 +200,14 @@ class NewsController extends Controller
                     @chmod($fileDir, 0777);
                 }
                 $photo->saveAs($fileDir . $filename);
+                chmod($fileDir . $filename, 0777);
+                Image::thumbnail($fileDir . $filename, 120, 120)
+                    ->save(Yii::getAlias($fileDir . "thumb_" . $filename), ['quality' => 80]);
+                chmod($fileDir . "thumb_" . $filename, 0777);
+                $utility = new UtilityComponent();
+                $sizes = $utility->imageSizeRatio($fileDir . $filename, 255, 255);
+                Image::getImagine()->open($fileDir . $filename)->thumbnail(new Box($sizes['width'], $sizes['height']))->save($fileDir . "mobile_" . $filename, ['quality' => 90]);
+                chmod($fileDir . "mobile_" . $filename, 0777);
                 $model->photo = $filename;
             }
             else{
@@ -243,8 +265,6 @@ class NewsController extends Controller
     public function actionDelete($id)
     {
         $model = News::findOne($id);
-        $galery = Galery::find()->where(['childid'=>$model->id])->all();
-        $galery->deleteAll();
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);

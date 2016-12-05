@@ -327,4 +327,7 @@ class SiteController extends Controller
             }
         }
     }
+    public function actionMessagesend(){
+        return $this->render('succ');
+    }
 }

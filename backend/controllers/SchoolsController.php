@@ -2,10 +2,13 @@
 
 namespace backend\controllers;
 
+use common\components\UtilityComponent;
+use Imagine\Image\Box;
 use Yii;
 use app\models\Schools;
 use yii\data\ActiveDataProvider;
 use yii\filters\AccessControl;
+use yii\imagine\Image;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -94,6 +97,13 @@ class SchoolsController extends Controller
 
                 $image->saveAs($fileDir . $filename);
                 chmod($fileDir . $filename, 0777);
+                Image::thumbnail($fileDir . $filename, 120, 120)
+                    ->save(Yii::getAlias($fileDir . "thumb_" . $filename), ['quality' => 80]);
+                chmod($fileDir . "thumb_" . $filename, 0777);
+                $utility = new UtilityComponent();
+                $sizes = $utility->imageSizeRatio($fileDir . $filename, 500, 500);
+                Image::getImagine()->open($fileDir . $filename)->thumbnail(new Box($sizes['width'], $sizes['height']))->save($fileDir . "mobile_" . $filename, ['quality' => 90]);
+                chmod($fileDir . "mobile_" . $filename, 0777);
 
                 $model->image = $filename;
             }
@@ -143,6 +153,13 @@ class SchoolsController extends Controller
 
                 $image->saveAs($fileDir . $filename);
                 chmod($fileDir . $filename, 0777);
+                Image::thumbnail($fileDir . $filename, 120, 120)
+                    ->save(Yii::getAlias($fileDir . "thumb_" . $filename), ['quality' => 80]);
+                chmod($fileDir . "thumb_" . $filename, 0777);
+                $utility = new UtilityComponent();
+                $sizes = $utility->imageSizeRatio($fileDir . $filename, 500, 500);
+                Image::getImagine()->open($fileDir . $filename)->thumbnail(new Box($sizes['width'], $sizes['height']))->save($fileDir . "mobile_" . $filename, ['quality' => 90]);
+                chmod($fileDir . "mobile_" . $filename, 0777);
 
                 $model->image = $filename;
             }
