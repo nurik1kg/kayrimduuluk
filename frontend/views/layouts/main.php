@@ -67,7 +67,7 @@ ChangeLanguageAsset::register($this);
     <nav class="uk-navbar">
         <div class="uk-navbar-nav">
             <a href="#" class="multilanguage-set <?=Yii::$app->language=='kg-KG'?'lang lang-kg':'lang'; ?>" data-language="1">KG</a>
-            <a href="#" class="multilanguage-set <?=Yii::$app->language=='rus-RUS'?'lang lang-kg':'lang'; ?>" data-language="4">RU</a>
+            <a href="#" class="multilanguage-set <?=Yii::$app->language=='ru-RU'?'lang lang-kg':'lang'; ?>" data-language="2">RU</a>
             <a href="#" class="multilanguage-set <?=Yii::$app->language=='en-EN'?'lang lang-kg':'lang'; ?>" data-language="3">EN</a>
         </div>
 
