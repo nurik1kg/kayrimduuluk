@@ -11,7 +11,7 @@ $this->title = Yii::t('app','great_names');
                 <?php foreach ($peoples as $i => $people){
                     switch ($lang){
                         case 1:{ ?>
-                            <div class="uk-width-1-3">
+                            <div class="uk-width-1-3" style="margin-bottom: 25px;">
                                 <a href="<?='#modal-blank'.$i?>" data-uk-modal=""><figure class="uk-overlay">
                                         <img  class="uk-overlay-scale uk-border-circle" src="<?='/'.Yii::$app->params['urlPeople'].$people->logo?>" width="600" height="400">
                                         <figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-ignore">
@@ -46,7 +46,7 @@ $this->title = Yii::t('app','great_names');
                             break;
                         }
                         case 2:{ ?>
-                            <div class="uk-width-1-3">
+                            <div class="uk-width-1-3" style="margin-bottom: 25px;">
                                 <a href="<?='#modal-blank'.$i?>" data-uk-modal=""><figure class="uk-overlay">
                                         <img  class="uk-overlay-scale uk-border-circle" src="<?='/'.Yii::$app->params['urlPeople'].$people->logo?>" width="600" height="400">
                                         <figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-ignore">
@@ -81,7 +81,7 @@ $this->title = Yii::t('app','great_names');
                             break;
                         }
                         case 3:{ ?>
-                            <div class="uk-width-1-3">
+                            <div class="uk-width-1-3" style="margin-bottom: 25px;">
                                 <a href="<?='#modal-blank'.$i?>" data-uk-modal=""><figure class="uk-overlay">
                                         <img  class="uk-overlay-scale uk-border-circle" src="<?='/'.Yii::$app->params['urlPeople'].$people->logo?>" width="600" height="400">
                                         <figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-ignore">
@@ -116,7 +116,7 @@ $this->title = Yii::t('app','great_names');
                             break;
                         }
                         default:{ ?>
-                            <div class="uk-width-1-3">
+                            <div class="uk-width-1-3" style="margin-bottom: 25px;">
                                 <a href="<?='#modal-blank'.$i?>" data-uk-modal=""><figure class="uk-overlay">
                                         <img  class="uk-overlay-scale uk-border-circle" src="<?='/'.Yii::$app->params['urlPeople'].$people->logo?>" width="600" height="400">
                                         <figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-ignore">

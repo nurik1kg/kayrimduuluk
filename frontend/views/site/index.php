@@ -308,8 +308,8 @@ $this->title = Yii::t('app','home');
                     <div class="uk-grid uk-grid-collapse">
                         <div class="uk-width-medium-1-2 uk-text-right">
                             <h2 class="person-title uk-contrast" data-uk-scrollspy="{cls:'uk-animation-scale-down', repeat: true, delay:100}"><?=Yii::t('app','aAsan')?></h2>
-                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-left', repeat: true, delay:100}"><?=Yii::t('app','asan23title')?></h2>
-                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-left', repeat: true, delay:100}"><?=Yii::t('app','asan23text')?></p>
+                            <h2 class="person-date" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:100}"><?=Yii::t('app','asan23title')?></h2>
+                            <p class="uk-contrast" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay:100}"><?=Yii::t('app','asan23text')?></p>
                         </div>
                         <div class="uk-width-medium-1-2">
                             <img src="/style/img/asan/asan23.png" class="person" data-uk-scrollspy="{cls:'uk-animation-scale-up', repeat: true, delay:100}">
@@ -387,7 +387,9 @@ $this->title = Yii::t('app','home');
         <div class="uk-width-1-2">
             <div class="section-donate-block1">
                 <div class="uk-width uk-float-right" style="max-width:600px">
-
+					<div class="csas">
+						<iframe width="600" height="450" src="https://www.youtube.com/embed/uV7QrKb4JjY" frameborder="0" allowfullscreen></iframe>
+					</div>
                 </div>
             </div>
         </div>
@@ -412,6 +414,7 @@ $this->title = Yii::t('app','home');
         </div>
     </div>
 </div>
+
 <div class="section-diagram">
     <div class="uk-grid uk-grid-collapse">
         <div class="uk-width-1-2 dbg-fs">
@@ -489,7 +492,7 @@ $this->title = Yii::t('app','home');
 <div class="section-news">
     <div class="uk-container uk-container-center">
         <div class="uk-width uk-container-center uk-text-center uk-hidden-small" style="max-width: 850px">
-            <div class="uk-grid" data-uk-scrollspy="{cls:'uk-animation-fade', target:'.fnews', delay:100, repeat: true}">
+            <div class="uk-grid uk-grid-match" data-uk-scrollspy="{cls:'uk-animation-fade', target:'.fnews', delay:100, repeat: true}">
                 <?php
                 $news = \app\models\News::find()->orderBy(['date' => SORT_DESC])->all();
                 $flag = 0;

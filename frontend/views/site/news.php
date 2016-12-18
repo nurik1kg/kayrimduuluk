@@ -6,7 +6,7 @@ $this->title = Yii::t('app','news');
 <div class="news-page">
     <div class="uk-width uk-container-center uk-text-center" style="max-width: 850px">
         <h1 class="info-title" style="display: inline-block"><?=Yii::t('app','news_of')?></h1>
-        <div class="uk-grid uk-grid-medium uk-margin-large-top" data-uk-scrollspy="{cls:'uk-animation-fade', target:'.fnews', delay:300, repeat: true}">
+        <div class="uk-grid uk-grid-medium uk-grid-match uk-margin-large-top" data-uk-scrollspy="{cls:'uk-animation-fade', target:'.fnews', delay:300, repeat: true}">
 
             <?php switch (Yii::$app->language){
                 case 'kg-KG':{

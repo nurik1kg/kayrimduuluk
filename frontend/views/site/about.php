@@ -8,33 +8,43 @@ $this->title = Yii::t('app','about');
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="news-page">
-    <div class="uk-width uk-container-center" style="max-width: 850px">
-        <div class="uk-text-center"><h1 class="info-title" style="display: inline-block"><?= Yii::t('app','title_info')?></h1></div>
+    <div class="uk-width uk-container-center" style="max-width: 1024px">
+        <div class="uk-text-center"><h1 class="info-title" style="display: inline-block"><?= Yii::t('app','page_about')?></h1></div>
         <div class="uk-panel uk-panel-box uk-margin-top">
-            <div class="uk-grid uk-grid-medium">
-                <?php
-                $model = \app\models\Info::findOne(1);
-                switch (Yii::$app->language){
-                    case 'kg-KG': {
-                        echo $model->text_kg;
-                        break;
-                    }
-                    case 'ru-RU': {
-                        echo $model->text_ru;
-                        break;
-                    }
-                    case 'en-EN': {
-                        echo $model->text_en;
-                        break;
-                    }
-                    default: {
-                        echo $model->text_kg;
-                        break;
-                    }
-                } ?>
-            </div>
-
-
+                    <div class="uk-grid uk-grid-medium">
+                        <div class="uk-width-1-2">
+                            <div class="uk-cover" style="height: 350px;">
+                                <video class="uk-cover-object" width="600" height="400" autoplay loop muted controls>
+                                    <source src="/style/video/n.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="uk-width-1-2">
+                            <div class="uk-scrollable-box" style="height: 366px;">
+                                <?php
+                                $model = \app\models\Info::findOne(1);
+                                switch (Yii::$app->language){
+                                    case 'kg-KG': {
+                                        echo $model->text_kg;
+                                        break;
+                                    }
+                                    case 'ru-RU': {
+                                        echo $model->text_ru;
+                                        break;
+                                    }
+                                    case 'en-EN': {
+                                        echo $model->text_en;
+                                        break;
+                                    }
+                                    default: {
+                                        echo $model->text_kg;
+                                        break;
+                                    }
+                                } ?>
+                            </div>
+                        </div>
+                    </div>
 
             <!-- -->
         </div>

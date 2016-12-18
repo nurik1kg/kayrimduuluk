@@ -14,7 +14,7 @@
 }
 
 .lang-kg {
-  border: 1px solid #919191;
+  border: 1px solid #fba026;
 }
 
 .section1 {
@@ -608,4 +608,11 @@
   background: #fff none repeat scroll 0 0;
   border-radius: 40px;
   padding: 16px 0 1px;
+}
+
+.csas {
+  background: rgba(0, 0, 0, 0) linear-gradient(to left, rgba(16, 20, 32, 0.7) 0px, rgba(16, 20, 32, 0.3)) repeat scroll 0 0;
+  border-radius: 7px;
+  height: 450px;
+  margin: -55px 35px 0 0;
 }

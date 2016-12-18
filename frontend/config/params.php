@@ -9,6 +9,6 @@ return [
     'urlSchool' => 'uploads/school/',
     'urlReports' => 'uploads/reports/',
     'fileUploadUrl' => 'uploads/',
-    'facebook' => 'https://www.facebook.com/',
-    'instagram' => 'https://www.instagram.com/',
+    'facebook' => 'https://www.facebook.com/Kuttuu-bagyt-koomduk-fondu-1231844683498597',
+    'instagram' => 'https://www.instagram.com/kuttuubagyt/',
 ];

@@ -332,7 +332,7 @@ class SiteController extends Controller
             Yii::$app->mail
                 ->compose()
                 ->setFrom($_POST['aEmail'])
-                ->setTo('nurik1kg@mail.ru')
+                ->setTo('begulan@bk.ru')
                 ->setSubject('Жардам бергим келет!')
                 ->setTextBody("Аты жөнү: ".$_POST['aName']."     "."Телефон номери: ".$_POST['aPhone']."       "."email : ".$_POST['aEmail'])
                 ->send();
