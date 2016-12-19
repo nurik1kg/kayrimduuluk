@@ -328,23 +328,6 @@ class SiteController extends Controller
         }
     }
     public function actionFeedback(){
-        switch (Yii::$app->language) {
-            case 'kg-KG' : {
-                $message = 'Талабыңыз аткарылды. Чоң рахмат!';
-                break;
-            }
-            case 'ru-RU' : {
-                $message = 'Заявка успешно отправлено.';
-                break;
-            }
-            case 'en-EN' : {
-                $message = 'Sending success!';
-                break;
-            }
-            default : {
-                $message = 'Талабыңыз аткарылды. Чоң рахмат!';
-            }
-        }
         if($_POST && $_POST['aName'] && $_POST['aPhone'] && $_POST['aEmail']){
             if(Yii::$app->mail
                 ->compose()
@@ -353,9 +336,9 @@ class SiteController extends Controller
                 ->setSubject('Жардам бергим келет!')
                 ->setTextBody("Аты жөнү: ".$_POST['aName']."     "."Телефон номери: ".$_POST['aPhone']."       "."email : ".$_POST['aEmail'])
                 ->send())
-            return $this->redirect('success',['message'=>$message]);
+            return $this->render('success');
             else
-                return $this->redirect('donateerror');
+                return $this->render('donateerror');
 
         }
         return $this->redirect('index');

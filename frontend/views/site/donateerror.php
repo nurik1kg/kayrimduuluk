@@ -27,3 +27,13 @@ switch (Yii::$app->language) {
         </form>
     </div>
 </div>
+<script type="text/javascript">
+    <!--
+    function Redirect() {
+        window.location="/";
+    }
+
+    //document.write("You will be redirected to main page in 10 sec.");
+    setTimeout('Redirect()', 3000);
+    //-->
+</script>
