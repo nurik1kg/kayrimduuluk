@@ -2,52 +2,37 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'Админ панель ';
 ?>
-<div class="site-index">
-
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
-
-    <div class="body-content">
-
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
         <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
+            <a href="<?= \yii\helpers\Url::toRoute('news/index');?>"><div class="col-md-3 text-center border" style="margin:26px; padding: 15px;">
+                    <img src="/img/news.png" alt="" width="100px;"><h4>Жаңылыктар</h4>
+                </div></a>
+            <a href="<?= \yii\helpers\Url::toRoute('people/index');?>"><div class="col-md-3 text-center border" style="margin:26px; padding: 15px;">
+                    <img src="/img/bman.png" alt="" width="100px;"><h4>Белгилүү инсандар</h4>
+                </div></a>
+            <a href="<?= \yii\helpers\Url::toRoute('sponsor/index');?>"><div class="col-md-3 text-center border" style="margin:26px; padding: 15px;">
+                    <img src="/img/part.png" alt="" width="100px;"><h4>Өнөктөштөр</h4>
+                </div></a>
+            <a href="<?= \yii\helpers\Url::toRoute('reports/index');?>"><div class="col-md-5 text-center border" style="margin:26px; padding: 15px;">
+                    <img src="/img/report.png" alt="" width="100px;"><h4>Отчёттор</h4>
+                </div></a>
+            <a href="<?= \yii\helpers\Url::toRoute('schools/index');?>"><div class="col-md-5 text-center border" style="margin:26px; padding: 15px;">
+                    <img src="/img/school.png" alt="" width="100px;"><h4>Мектептер</h4>
+                </div></a>
         </div>
-
+        <div class="row">
+            <a href="<?=\yii\helpers\Url::toRoute('statistic/index') ?>"><div class="col-md-11 border" style="margin:25px; padding: 15px;">
+                    <h2>Статистика</h2>
+                            <?php
+                            $aaa = \app\models\Statistic::findOne(1);
+                            echo '<p>Балдардын жалпы саны <b>'.($aaa->help+$aaa->helped).'</b></p>';
+                            echo '<p>Жардам алынды <b>'.$aaa->helped.'</b></p>';
+                            echo '<p>Жардам алына элек <b>'.$aaa->help.'</b></p>';
+                            ?>
+                </div></a>
+        </div>
     </div>
 </div>

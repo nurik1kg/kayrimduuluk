@@ -14,6 +14,7 @@ return [
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
+            'class' => 'pjhl\multilanguage\components\AdvancedRequest'
         ],
         'user' => [
             'identityClass' => 'common\models\User',
@@ -36,14 +37,19 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
+
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => [
-            ],
+            'class' => 'pjhl\multilanguage\components\AdvancedUrlManager',
+//            'enablePrettyUrl' => true,
+//            'showScriptName' => false,
+//            'rules' => [
+//            ],
         ],
-        */
     ],
     'params' => $params,
+
+    'on beforeAction' => ['\pjhl\multilanguage\Start', 'run'],
+
 ];

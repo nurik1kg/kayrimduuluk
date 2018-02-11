@@ -7,12 +7,30 @@ $params = array_merge(
 );
 
 return [
+    'language' =>'ru-RU',
+
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
     'modules' => [],
     'components' => [
+//        'i18n' => [
+//            'translations' => [
+//                'app*' => [
+//                    'class' => 'yii\i18n\PhpMessageSource',
+//                    'basePath' => '@common/messages',
+//                ],
+//                'frontend*' => [
+//                    'class' => 'yii\i18n\PhpMessageSource',
+//                    'basePath' => '@common/messages',
+//                ],
+//                'backend*' => [
+//                    'class' => 'yii\i18n\PhpMessageSource',
+//                    'basePath' => '@common/messages',
+//                ],
+//            ],
+//        ],
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],
@@ -37,14 +55,13 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
+
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
-        */
     ],
     'params' => $params,
 ];

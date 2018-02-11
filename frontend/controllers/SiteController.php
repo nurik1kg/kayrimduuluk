@@ -1,8 +1,17 @@
 <?php
 namespace frontend\controllers;
 
+use app\models\News;
+use app\models\People;
+use app\models\Reports;
+use app\models\Schools;
+use app\models\Sponsor;
+use app\models\Statistic;
+use SebastianBergmann\CodeCoverage\Report\Xml\Report;
 use Yii;
 use yii\base\InvalidParamException;
+use yii\data\Pagination;
+use yii\helpers\Url;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -72,7 +81,10 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $statistic = Statistic::findOne(1);
+        return $this->render('index',[
+            'statistic' => $statistic,
+        ]);
     }
 
     /**
@@ -138,14 +150,21 @@ class SiteController extends Controller
      */
     public function actionAbout()
     {
-        return $this->render('about');
+        $schools = Schools::find()->all();
+        $reports = Reports::find()->all();
+        return $this->render('about',[
+            'schools' => $schools,
+            'reports' => $reports,
+        ]);
     }
+
 
     /**
      * Signs user up.
      *
      * @return mixed
      */
+    /*
     public function actionSignup()
     {
         $model = new SignupForm();
@@ -161,7 +180,7 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
-
+    */
     /**
      * Requests password reset.
      *
@@ -209,5 +228,119 @@ class SiteController extends Controller
         return $this->render('resetPassword', [
             'model' => $model,
         ]);
+    }
+    /**
+     * Sponsor pages
+     */
+    public function actionSponsors()
+    {
+        $model = Sponsor::find()->all();
+        return $this->render('sponsor',[
+            'sponsors'=>$model,
+        ]);
+    }
+
+    public function  actionNews(){
+        switch (Yii::$app->language){
+            case 'kg-KG':{
+                $query = News::find()->where(['not', ['title_kg'=>null]])->andWhere(['not', ['text_kg' => null]]);
+                break;
+            }
+            case 'ru-RU':{
+                $query = News::find()->where(['not', ['title_ru'=>null]])->andWhere(['not', ['text_ru' => null]]);
+                break;
+            }
+            case 'en-EN':{
+                $query = News::find()->where(['not', ['title_en'=>null]])->andWhere(['not', ['text_en' => null]]);
+                break;
+            }
+            default : {
+                $query = News::find()->where(['not', ['title_kg'=>null]])->andWhere(['not', ['text_kg' => null]]);
+            }
+        }
+//        $query = News::find();
+        $pagination = new Pagination([
+            'defaultPageSize' => 4,
+            'totalCount' =>$query->count(),
+        ]);
+        $news = $query->orderBy('date')
+            ->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+        return $this->render('news',[
+            'news' => $news,
+            'pagination' => $pagination,
+        ]);
+    }
+
+    public function actionGreat_names(){
+        switch (Yii::$app->language){
+            case 'kg-KG':{
+                $query = People::find()->where(['not', ['name_kg'=>null]])->andWhere(['not', ['content_kg' => null]])->all();
+                $lang =1;
+                break;
+            }
+            case 'ru-RU':{
+                $query = People::find()->where(['not', ['name_ru'=>null]])->andWhere(['not', ['content_ru' => null]])->all();
+                $lang =2;
+                break;
+            }
+            case 'en-EN':{
+                $query = People::find()->where(['not', ['name_en'=>null]])->andWhere(['not', ['content_en' => null]])->all();
+                $lang =3;
+                break;
+            }
+            default: {
+                $query = People::find()->where(['not', ['name_kg'=>null]])->andWhere(['not', ['content_kg' => null]])->all();
+                $lang =1;
+            }
+        }
+        return $this->render('people',[
+            'peoples'=>$query,
+            'lang' => $lang,
+        ]);
+    }
+
+    public function actionHelping($name,$phone,$email){
+        Yii::$app->mail
+            ->compose()
+            ->setFrom($email)
+            ->setTo('nurik1kg@mail.ru')
+            ->setSubject('Жардам бергим келет!')
+            ->setTextBody("Аты жөнү: ".$name."     "."Телефон номери: ".$phone."       "."email : ".$email)
+            ->send();
+        switch (Yii::$app->language){
+            case 'kg-KG' : {
+                return 'Талабыңыз аткарылды. Чоң рахмат! Кайдыгер карабаганыз үчүн!';
+                break;
+            }
+            case 'ru-RU' : {
+                return 'Заявка успешно отправлено.';
+                break;
+            }
+            case 'en-EN' : {
+                return 'Sending success!';
+                break;
+            }
+            default : {
+                return 'Талабыңыз аткарылды. Чоң рахмат! Кайдыгер карабаганыз үчүн!';
+            }
+        }
+    }
+    public function actionFeedback(){
+        if($_POST && $_POST['aName'] && $_POST['aPhone'] && $_POST['aEmail']){
+            if(Yii::$app->mail
+                ->compose()
+                ->setFrom($_POST['aEmail'])
+                ->setTo('begulan@bk.ru')
+                ->setSubject('Жардам бергим келет!')
+                ->setTextBody("Аты жөнү: ".$_POST['aName']."     "."Телефон номери: ".$_POST['aPhone']."       "."email : ".$_POST['aEmail'])
+                ->send())
+            return $this->render('success');
+            else
+                return $this->render('donateerror');
+
+        }
+        return $this->redirect('index');
     }
 }
